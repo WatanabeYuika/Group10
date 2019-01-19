@@ -13,11 +13,11 @@ public class JikanwariController implements Initializable {
     }
 
     public void initialize() {
-        System.out.print("start");
+        System.out.println("start");
     }
     
-    public void kamokuAction(ActionEvent event) {
-        System.out.print("Kamoku select");
+    public void kamokuAction(ActionEvent event) {//時間割コマを押すと
+        System.out.println("Kamoku select");
         KamokuController.initialize();
     }
 }

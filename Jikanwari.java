@@ -10,15 +10,18 @@ import javafx.fxml.FXMLLoader;
 
 public class Jikanwari extends Application {
     private static Stage stage;
+    private static Scene otherScene;
     
     @Override
     public void start(Stage primaryStage) throws Exception {
 	stage = primaryStage;
 	primaryStage.setTitle("JIKANWARI");
-	Pane myPane_top = (Pane)FXMLLoader.load(getClass().getResource("Jikanwari.fxml"));
+	Pane myPane_top = (Pane)FXMLLoader.load(getClass().getResource("Jikanwari.fxml"));   
+	Scene myScene = new Scene(myPane_top);	
     Pane myPane_other = (Pane)FXMLLoader.load(getClass().getResource("Kamoku.fxml"));
-	Scene myScene = new Scene(myPane_top);
-	primaryStage.setScene(myScene);
+    otherScene = new Scene(myPane_other); 
+
+    primaryStage.setScene(myScene);
 	primaryStage.show();
     }
 
@@ -26,18 +29,14 @@ public class Jikanwari extends Application {
         return stage;
     }
 
+    public static Scene getOtherScene(){
+        return otherScene;
+    }
+
     public static void kamokuStart(){
-        startkamoku("Kamoku.fxml");
+        getStage().setScene(getOtherScene());
+        getStage().show();
     }
-
-    public void startkamoku(String fxml) throws Exception{
-        Pane myPane_other = (Pane)FXMLLoader.load(getClass().getResource(fxml));
-        Scene otherScene = new Scene(myPane_other);
-        stage.setScene(otherScene);
-        stage.show();
-    }
-
-    
     
     public static void main(String[] args) {
         launch(args);

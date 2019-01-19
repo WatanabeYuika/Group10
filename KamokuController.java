@@ -15,19 +15,26 @@ public class KamokuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        initialize();
     }
 
     public static void initialize() {
-        System.out.print("start");
+        System.out.println("科目入力画面になります");
         Jikanwari.kamokuStart();
     }
     
-    public void backAction(ActionEvent event) {
+    public void backAction(ActionEvent event) {//←のボタンを押すと
         initialize();
     }
 
-    public void selectAction(ActionEvent event) {
-        System.out.print("select");
+    public void selectAction(ActionEvent event) {//メニューのセレクト
+        System.out.println("select");
+    }
+
+    public void keepAction(ActionEvent event) {//OKボタンを押すと
+        initialize();
+    }
+
+    public void deleteAction(ActionEvent event) {//削除ボタンを押すと
+        initialize();
     }
 }
