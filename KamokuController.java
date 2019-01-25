@@ -30,11 +30,23 @@ public class KamokuController implements Initializable {
         System.out.println("select");
     }
 
-    public void keepAction(ActionEvent event) {//OKボタンを押すと
+    public void saveAction(ActionEvent event) {//OKボタンを押すと
         initialize();
     }
 
     public void deleteAction(ActionEvent event) {//削除ボタンを押すと
         initialize();
+    }
+
+    public void upAbsenceAction(ActionEvent event) {
+
+    }
+
+    public void downAbsenceAction(ActionEvent event) {
+
+    }
+
+    public void getTani(ActionEvent event) {
+
     }
 }

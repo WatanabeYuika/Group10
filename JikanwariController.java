@@ -15,6 +15,12 @@ public class JikanwariController implements Initializable {
     public void initialize() {
         System.out.println("start");
     }
+
+
+    public void jikanwariSaveAction(ActionEvent event) {
+
+    }
+
     
     public void kamokuAction(ActionEvent event) {//時間割コマを押すと
         System.out.println("Kamoku select");
