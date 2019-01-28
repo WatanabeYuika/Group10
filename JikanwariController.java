@@ -65,8 +65,12 @@ public class JikanwariController implements Initializable {
         KamokuController.initialize();
     }    
 
-    public void initialize() {
+    public static void initialize() {
         System.out.println("start");
     }
 
+     public static void reStart() {
+        System.out.println("reStart");
+        Jikanwari.jikanwariReStart();
+    }
 }
