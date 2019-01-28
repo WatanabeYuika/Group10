@@ -69,7 +69,7 @@ public class JikanwariController implements Initializable {
         System.out.println("start");
     }
 
-     public static void reStart() {
+     public static void reStart() {//戻るボタン←でとりあえず時間割が表示されるように
         System.out.println("reStart");
         Jikanwari.jikanwariReStart();
     }
