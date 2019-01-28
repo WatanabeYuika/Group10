@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 
 public class Jikanwari extends Application {
     private static Stage stage;
+    private static Scene myScene;
     private static Scene otherScene;
     
     @Override
@@ -17,10 +18,9 @@ public class Jikanwari extends Application {
 	stage = primaryStage;
 	primaryStage.setTitle("JIKANWARI");
 	Pane myPane_top = (Pane)FXMLLoader.load(getClass().getResource("Jikanwari.fxml"));   
-	Scene myScene = new Scene(myPane_top);	
+	myScene = new Scene(myPane_top);	
     Pane myPane_other = (Pane)FXMLLoader.load(getClass().getResource("Kamoku.fxml"));
     otherScene = new Scene(myPane_other); 
-
     primaryStage.setScene(myScene);
 	primaryStage.show();
     }
@@ -29,8 +29,17 @@ public class Jikanwari extends Application {
         return stage;
     }
 
+    public static Scene getMyScene(){
+        return myScene;
+    }
+
     public static Scene getOtherScene(){
         return otherScene;
+    }
+
+    public static void jikanwariReStart(){
+        getStage().setScene(getMyScene());
+        getStage().show();
     }
 
     public static void kamokuStart(){

@@ -65,7 +65,7 @@ public class KamokuController implements Initializable {
     }
 
     public void backAction(ActionEvent event) {//←のボタンを押すと
-        initialize();
+        JikanwariController.reStart();
     }
 
     public void selectAction(ActionEvent event) {//メニューのセレクト
