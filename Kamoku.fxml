@@ -2,10 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -14,39 +12,32 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KamokuController">
    <children>
+      <Label contentDisplay="RIGHT" layoutX="24.0" layoutY="31.0" prefHeight="72.0" prefWidth="251.0" text="科目群">
+         <graphic>
+            <ComboBox fx:id="subjectGroupChoice" onAction="#subjectGroupChoiced" prefWidth="150.0" />
+         </graphic>
+      </Label>
       <Label contentDisplay="RIGHT" layoutX="24.0" layoutY="87.0" prefHeight="121.0" prefWidth="251.0" text="科目名">
          <graphic>
-            <ChoiceBox prefHeight="78.0" prefWidth="207.0">
-               <contextMenu>
-                  <ContextMenu onAction="#selectAction">
-                    <items>
-                      <MenuItem mnemonicParsing="false" onAction="#selectAction" text="Unspecified Action" />
-                    </items>
-                  </ContextMenu>
-               </contextMenu>
-            </ChoiceBox>
+            <ComboBox fx:id="subjectChoice" onAction="#subjectChoiced" prefWidth="150.0" />
          </graphic>
       </Label>
       <Label contentDisplay="RIGHT" layoutX="57.0" layoutY="271.0" text="教室">
          <graphic>
-            <TextArea prefHeight="44.0" prefWidth="194.0" />
+            <TextArea fx:id="classroomTextArea" prefHeight="44.0" prefWidth="194.0" />
          </graphic>
       </Label>
       <Label contentDisplay="RIGHT" layoutX="57.0" layoutY="208.0" text="担任">
          <graphic>
-            <TextArea prefHeight="44.0" prefWidth="194.0" />
+            <TextArea fx:id="teacherTextArea" prefHeight="44.0" prefWidth="194.0" />
          </graphic>
       </Label>
       <Label contentDisplay="BOTTOM" layoutX="28.0" layoutY="363.0" prefHeight="142.0" prefWidth="141.0" text="メモ">
          <graphic>
-            <TextArea layoutX="50.0" layoutY="1000.0" prefHeight="121.0" prefWidth="140.0" />
+            <TextArea fx:id="memoTextArea" layoutX="50.0" layoutY="1000.0" prefHeight="121.0" prefWidth="140.0" />
          </graphic>
       </Label>
-      <Button layoutX="248.0" layoutY="427.0" mnemonicParsing="false" onAction="#deleteAction" text="削除" />
-      <Button layoutX="1.0" layoutY="-1.0" minWidth="37.0" mnemonicParsing="false" onAction="#backAction" prefHeight="32.0" prefWidth="37.0" text="←" />
-      <Button layoutX="194.0" layoutY="427.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="37.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="32.0" prefWidth="37.0" text="OK" />
-      <CheckBox layoutX="212.0" layoutY="488.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#getTani" text="単位取得" />
-      <Label contentDisplay="RIGHT" layoutX="167.0" layoutY="352.0" prefHeight="55.0" prefWidth="141.0" text="欠席">
+      <Label contentDisplay="RIGHT" layoutX="169.0" layoutY="355.0" prefHeight="55.0" prefWidth="141.0" text="欠席">
          <graphic>
             <GridPane prefHeight="51.0" prefWidth="83.0">
               <columnConstraints>
@@ -60,23 +51,14 @@
                <children>
                   <Button minWidth="31.0" mnemonicParsing="false" onAction="#upAbsenceAction" prefHeight="33.0" prefWidth="31.0" text="+" />
                   <Button minWidth="35.0" mnemonicParsing="false" onAction="#downAbsenceAction" prefHeight="33.0" prefWidth="35.0" text="-" GridPane.columnIndex="1" />
-                  <Label contentDisplay="RIGHT" prefHeight="50.0" prefWidth="22.0" GridPane.columnIndex="2" />
+                  <Label fx:id="absenceLabel" contentDisplay="RIGHT" prefHeight="50.0" prefWidth="22.0" GridPane.columnIndex="2" />
                </children>
             </GridPane>
          </graphic>
       </Label>
-      <Label contentDisplay="RIGHT" layoutX="24.0" layoutY="31.0" prefHeight="72.0" prefWidth="251.0" text="科目群">
-         <graphic>
-            <ChoiceBox prefHeight="35.0" prefWidth="207.0">
-               <contextMenu>
-                  <ContextMenu onAction="#selectAction">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#selectAction" text="Unspecified Action" />
-                     </items>
-                  </ContextMenu>
-               </contextMenu>
-            </ChoiceBox>
-         </graphic>
-      </Label>
+      <Button layoutX="248.0" layoutY="427.0" mnemonicParsing="false" onAction="#deleteAction" text="削除" />
+      <Button layoutX="1.0" layoutY="-1.0" minWidth="37.0" mnemonicParsing="false" onAction="#backAction" prefHeight="32.0" prefWidth="37.0" text="←" />
+      <Button layoutX="194.0" layoutY="427.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="37.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="32.0" prefWidth="37.0" text="OK" />
+      <CheckBox fx:id="taniCheck" layoutX="212.0" layoutY="488.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#getTani" text="単位取得" />
    </children>
 </AnchorPane>
