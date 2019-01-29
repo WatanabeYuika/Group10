@@ -12,9 +12,16 @@ public class Jikanwari extends Application {
     private static Stage stage;
     private static Scene myScene;
     private static Scene otherScene;
+    public static int koma=5;
+    public static int youbi=5;
+    public static String saveKomaAndYoubiFile="test2.csv";
+    public static int ckoma,cyoubi;
+    public static SandL sal;
     
     @Override
     public void start(Stage primaryStage) throws Exception {
+	sal=new SandL(koma,youbi,saveKomaAndYoubiFile);
+	sal.loadFile();
 	stage = primaryStage;
 	primaryStage.setTitle("JIKANWARI");
 	Pane myPane_top = (Pane)FXMLLoader.load(getClass().getResource("Jikanwari.fxml"));   
@@ -49,5 +56,18 @@ public class Jikanwari extends Application {
     
     public static void main(String[] args) {
         launch(args);
+    }
+
+     public static void save(String str){
+	sal.data[ckoma][cyoubi]=str;
+    }
+
+    public static void saving(){
+	sal.saveFile();
+    }
+
+    public static void jikanwariStart(){
+	getStage().setScene(getMyScene());
+	getStage().show();
     }
 }

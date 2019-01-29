@@ -34,6 +34,7 @@ public class KamokuController implements Initializable {
     private TextArea teacherTextArea;
     private TextArea memoTextArea;
     private CheckBox taniCheck;
+    public String kamokugun,kamoku;
 
     @FXML private Label absenceLabel;
     @FXML private ComboBox<String> subjectGroupChoice;
@@ -86,115 +87,117 @@ public class KamokuController implements Initializable {
     public void subjectGroupChoiced(ActionEvent event) {//科目群の選択をしたら
         ComboBox c = (ComboBox)event.getSource();
         System.out.println( "選択:"+(String)c.getValue() ) ;
+	kamokugun=(String)c.getValue();
         String str;
 
         if(c.getValue().equals("基軸教育科目")){
             subjectChoice.getItems().clear();
             try {
-                    File file  = new File("基軸教育科目.csv");
-                    Scanner sc = new Scanner(file);
+		File file  = new File("基軸教育科目.csv");
+		Scanner sc = new Scanner(file);
                 
-                    while(sc.hasNextLine()){
-                        str = sc.nextLine();               
-                        String[] re = str.split(",", 0);
-                        Jugyou kijiku = new Jugyou(str);
-                        String kijiku2 = "" + kijiku;
-                        subjectChoice.getItems().add(kijiku2);
-                    }
-                } catch (FileNotFoundException e){
-                    System.err.print(e);
-                }
+		while(sc.hasNextLine()){
+		    str = sc.nextLine();               
+		    String[] re = str.split(",", 0);
+		    Jugyou kijiku = new Jugyou(str);
+		    String kijiku2 = "" + kijiku;
+		    subjectChoice.getItems().add(kijiku2);
+		}
+	    } catch (FileNotFoundException e){
+		System.err.print(e);
+	    }
             subjectChoice.getSelectionModel().select(-1);
         }else if(c.getValue().equals("現代教養科目")){
             subjectChoice.getItems().clear();
             try {
-                    File file  = new File("現代教養科目.csv");
-                    Scanner sc = new Scanner(file);
+		File file  = new File("現代教養科目.csv");
+		Scanner sc = new Scanner(file);
                 
-                    while(sc.hasNextLine()){
-                        str = sc.nextLine();               
-                        String[] re = str.split(",", 0);
-                        Jugyou gendai = new Jugyou(str);
-                        String gendai2 = "" + gendai;
-                        subjectChoice.getItems().add(gendai2);
-                    }
-                } catch (FileNotFoundException e){
-                    System.err.print(e);
-                }
+		while(sc.hasNextLine()){
+		    str = sc.nextLine();               
+		    String[] re = str.split(",", 0);
+		    Jugyou gendai = new Jugyou(str);
+		    String gendai2 = "" + gendai;
+		    subjectChoice.getItems().add(gendai2);
+		}
+	    } catch (FileNotFoundException e){
+		System.err.print(e);
+	    }
             subjectChoice.getSelectionModel().select(-1);
         }else if(c.getValue().equals("留学生科目")){
             subjectChoice.getItems().clear();
             try {
-                    File file  = new File("留学生科目.csv");
-                    Scanner sc = new Scanner(file);
+		File file  = new File("留学生科目.csv");
+		Scanner sc = new Scanner(file);
                 
-                    while(sc.hasNextLine()){
-                        str = sc.nextLine();               
-                        String[] re = str.split(",", 0);
-                        Jugyou ryugaku = new Jugyou(str);
-                        String ryugaku2 = "" + ryugaku;
-                        subjectChoice.getItems().add(ryugaku2);
-                    }
-                } catch (FileNotFoundException e){
-                    System.err.print(e);
-                }
+		while(sc.hasNextLine()){
+		    str = sc.nextLine();               
+		    String[] re = str.split(",", 0);
+		    Jugyou ryugaku = new Jugyou(str);
+		    String ryugaku2 = "" + ryugaku;
+		    subjectChoice.getItems().add(ryugaku2);
+		}
+	    } catch (FileNotFoundException e){
+		System.err.print(e);
+	    }
             subjectChoice.getSelectionModel().select(-1);
         }else if(c.getValue().equals("教職等資格科目")){
             subjectChoice.getItems().clear();
             try {
-                    File file  = new File("教職等資格科目.csv");
-                    Scanner sc = new Scanner(file);
+		File file  = new File("教職等資格科目.csv");
+		Scanner sc = new Scanner(file);
                 
-                    while(sc.hasNextLine()){
-                        str = sc.nextLine();               
-                        String[] re = str.split(",", 0);
-                        Jugyou kyosyoku = new Jugyou(str);
-                        String kyosyoku2 = "" + kyosyoku;
-                        subjectChoice.getItems().add(kyosyoku2);
-                    }
-                } catch (FileNotFoundException e){
-                    System.err.print(e);
-                }
+		while(sc.hasNextLine()){
+		    str = sc.nextLine();               
+		    String[] re = str.split(",", 0);
+		    Jugyou kyosyoku = new Jugyou(str);
+		    String kyosyoku2 = "" + kyosyoku;
+		    subjectChoice.getItems().add(kyosyoku2);
+		}
+	    } catch (FileNotFoundException e){
+		System.err.print(e);
+	    }
             subjectChoice.getSelectionModel().select(-1);
         }else if(c.getValue().equals("理系科目")){
             subjectChoice.getItems().clear();
             try {
-                    File file  = new File("理系科目.csv");
-                    Scanner sc = new Scanner(file);
+		File file  = new File("理系科目.csv");
+		Scanner sc = new Scanner(file);
                 
-                    while(sc.hasNextLine()){
-                        str = sc.nextLine();               
-                        String[] re = str.split(",", 0);
-                        Jugyou rikei = new Jugyou(str);
-                        String rikei2 = "" + rikei;
-                        subjectChoice.getItems().add(rikei2);
-                    }
-                } catch (FileNotFoundException e){
-                    System.err.print(e);
-                }
+		while(sc.hasNextLine()){
+		    str = sc.nextLine();               
+		    String[] re = str.split(",", 0);
+		    Jugyou rikei = new Jugyou(str);
+		    String rikei2 = "" + rikei;
+		    subjectChoice.getItems().add(rikei2);
+		}
+	    } catch (FileNotFoundException e){
+		System.err.print(e);
+	    }
             subjectChoice.getSelectionModel().select(-1);
         }else if(c.getValue().equals("学部共通科目")){
             subjectChoice.getItems().clear();
             try {
-                    File file  = new File("学部共通科目.csv");
-                    Scanner sc = new Scanner(file);
+		File file  = new File("学部共通科目.csv");
+		Scanner sc = new Scanner(file);
                 
-                    while(sc.hasNextLine()){
-                        str = sc.nextLine();               
-                        String[] re = str.split(",", 0);
-                        Jugyou kyoutu = new Jugyou(str);
-                        String kyoutu2 = "" + kyoutu;
-                        subjectChoice.getItems().add(kyoutu2);
-                    }
-                } catch (FileNotFoundException e){
-                    System.err.print(e);
-                }
+		while(sc.hasNextLine()){
+		    str = sc.nextLine();               
+		    String[] re = str.split(",", 0);
+		    Jugyou kyoutu = new Jugyou(str);
+		    String kyoutu2 = "" + kyoutu;
+		    subjectChoice.getItems().add(kyoutu2);
+		}
+	    } catch (FileNotFoundException e){
+		System.err.print(e);
+	    }
             subjectChoice.getSelectionModel().select(-1);
         }
     }
 
     public void subjectChoiced(ActionEvent event) {//科目を選択したら
         ComboBox c = (ComboBox)event.getSource();
+	kamoku=(String)c.getValue();
         System.out.println( "選択:"+(String)c.getValue() );
     }
 
@@ -207,7 +210,8 @@ public class KamokuController implements Initializable {
     }
 
     public void saveAction(ActionEvent event) {//OKボタンを押すと
-        initialize();
+       	Jikanwari.save(kamokugun+","+kamoku);
+	Jikanwari.jikanwariStart();
     }
 
     public void deleteAction(ActionEvent event) {//削除ボタンを押すと

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KamokuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KamokuController">
    <children>
       <Label contentDisplay="RIGHT" layoutX="24.0" layoutY="31.0" prefHeight="72.0" prefWidth="251.0" text="科目群">
          <graphic>
@@ -51,6 +51,7 @@
                <children>
                   <Button minWidth="31.0" mnemonicParsing="false" onAction="#upAbsenceAction" prefHeight="33.0" prefWidth="31.0" text="+" />
                   <Button minWidth="35.0" mnemonicParsing="false" onAction="#downAbsenceAction" prefHeight="33.0" prefWidth="35.0" text="-" GridPane.columnIndex="1" />
+                  <Label fx:id="absenceLabel" contentDisplay="RIGHT" prefHeight="50.0" prefWidth="22.0" GridPane.columnIndex="2" />
                </children>
             </GridPane>
          </graphic>
@@ -59,6 +60,5 @@
       <Button layoutX="1.0" layoutY="-1.0" minWidth="37.0" mnemonicParsing="false" onAction="#backAction" prefHeight="32.0" prefWidth="37.0" text="←" />
       <Button layoutX="194.0" layoutY="427.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="37.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="32.0" prefWidth="37.0" text="OK" />
       <CheckBox fx:id="taniCheck" layoutX="212.0" layoutY="488.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#getTani" text="単位取得" />
-      <Label fx:id="absenceLabel" contentDisplay="RIGHT" layoutX="272.0" layoutY="363.0" prefHeight="50.0" prefWidth="35.0" />
    </children>
 </AnchorPane>
