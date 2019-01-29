@@ -16,53 +16,28 @@
 <AnchorPane accessibleText="String" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JikanwariController">
    <children>
       <ComboBox fx:id="termComboBox" layoutX="14.0" layoutY="14.0" onAction="#termComboBoxCoiced" prefWidth="150.0" />
-      <BorderPane layoutX="69.0" layoutY="36.0" prefHeight="596.0" prefWidth="390.0">
+      <BorderPane layoutX="69.0" layoutY="36.0" prefHeight="615.0" prefWidth="390.0">
          <center>
-            <GridPane focusTraversable="true" gridLinesVisible="true" maxHeight="574.0" maxWidth="391.0" minHeight="500.0" minWidth="300.0" prefHeight="557.0" prefWidth="314.0" BorderPane.alignment="CENTER">
+            <GridPane focusTraversable="true" gridLinesVisible="true" maxHeight="574.0" maxWidth="391.0" minHeight="500.0" minWidth="300.0" prefHeight="526.0" prefWidth="365.0" BorderPane.alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="55.0" prefWidth="55.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.33331298828125" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                  <RowConstraints maxHeight="67.33332824707031" minHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="80.0" minHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="67.33332824707031" minHeight="0.0" prefHeight="36.00000762939453" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Line endX="-49.742645263671875" endY="-7.7425994873046875" startX="-104.03553771972656" startY="-27.035491943359375" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" scaleShape="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
                   <GridPane GridPane.rowIndex="1">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -410,6 +385,529 @@
                   <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
                   <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
                   <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="mon1Subject" />
+                              <Label fx:id="mon1Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="mon1ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="mon1Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic></Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="tue1Subject" />
+                              <Label fx:id="tue1Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="tue1ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="tue1Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic></Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="wed1Subject" />
+                              <Label fx:id="wed1Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="wed1ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="wed1Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="tur1Subject" />
+                              <Label fx:id="tur1Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="tur1ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="tur1Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="fri1Subject" />
+                              <Label fx:id="fri1Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="fri1ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="fri1Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="mon2Subject" />
+                              <Label fx:id="mon2Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="mon2ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="mon2Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="tue2Subject" />
+                              <Label fx:id="tue2Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="tue2ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="tue2Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="wed2Subject" />
+                              <Label fx:id="wed2Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="wed2ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="wed2Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="tur2Subject" />
+                              <Label fx:id="tur2Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="tur2ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="tur2Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="fri2Subject" />
+                              <Label fx:id="fri2Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="fri2ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="fri2Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="mon3Subject" />
+                              <Label fx:id="mon3Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="mon3ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="mon3Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="tue3Subject" />
+                              <Label fx:id="tue3Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="tue3ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="tue3Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="wed3Subject" />
+                              <Label fx:id="wed3Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="wed3ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="wed3Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="tur3Subject" />
+                              <Label fx:id="tur3Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="tur3ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="tur3Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="fri3Subject" />
+                              <Label fx:id="fri3Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="fri3ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="fri3Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="mon4Subject" />
+                              <Label fx:id="mon4Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="mon4ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="mon4Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="tue4Subject" />
+                              <Label fx:id="tue4Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="tue4ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="tue4Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="wed4Subject" />
+                              <Label fx:id="wed4Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="wed4ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="wed4Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="tur4Subject" />
+                              <Label fx:id="tur4Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="tur4ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="tur4Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="fri4Subject" />
+                              <Label fx:id="fri4Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="fri4ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="fri4Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="mon5Subject" />
+                              <Label fx:id="mon5Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="mon5ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="mon5Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="tue5Subject" />
+                              <Label fx:id="tue5Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="tue5ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="tue5Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="wed5Subject" />
+                              <Label fx:id="wed5Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="wed5ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="wed5Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="tur5Subject" />
+                              <Label fx:id="tur5Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="tur5ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="tur5Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <graphic>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="fri5Subject" />
+                              <Label fx:id="fri5Teacher" GridPane.rowIndex="1" />
+                              <Label fx:id="fri5ClassRoom" GridPane.rowIndex="2" />
+                              <Label fx:id="fri5Memo" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </Button>
                </children>
             </GridPane>
          </center>
