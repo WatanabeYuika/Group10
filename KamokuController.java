@@ -11,14 +11,19 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 
 public class KamokuController implements Initializable {
-    int x = 0;
+    int x;
     private TextArea classroomTextArea;
     private TextArea teacherTextArea;
     private TextArea memoTextArea;
     private CheckBox taniCheck;
-    @FXML private Label absenceLabel;
-    @FXML private ComboBox<String> subjectGroupChoice;
-    @FXML private ComboBox<String> subjectChoice;
+    
+    
+    @FXML
+    private Label absenceLabel;
+    @FXML
+    private ComboBox<String> subjectGroupChoice;
+    @FXML
+    private ComboBox<String> subjectChoice;
 
     public ComboBox<String> getSubjectGroupChoice() {
         return subjectGroupChoice;
@@ -66,6 +71,8 @@ public class KamokuController implements Initializable {
         }
     }
 
+    
+
     public void subjectChoiced(ActionEvent event) {//科目を選択したら
         ComboBox c = (ComboBox)event.getSource();
         System.out.println( "選択:"+(String)c.getValue() );
@@ -91,6 +98,7 @@ public class KamokuController implements Initializable {
         x = x + 1;
         absenceLabel.setText( + x + "回");
         System.out.print(x);
+
     }
 
     public void downAbsenceAction(ActionEvent event) {//欠席カウントdown
@@ -102,6 +110,8 @@ public class KamokuController implements Initializable {
     public void getTani(ActionEvent event) {//単位取得のチェックしたら
 
     }
+
+
     
     public static void initialize() {
         System.out.println("科目入力画面になります");
