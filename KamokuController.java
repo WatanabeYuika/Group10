@@ -9,6 +9,25 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
+import java.io.FileNotFoundException;
+import java.io.File;
+import java.util.Scanner;
+
+class Jugyou {
+    private String kamoku; //授業名
+    private String tani; //各授業の取得可能単位数
+
+    Jugyou(String str){
+        String[] re = str.split(",", 0);
+        this.kamoku   = re[0];
+        this.tani     = re[1];
+    }
+    
+
+    public String toString(){
+        return kamoku;
+    }
+}
 
 public class KamokuController implements Initializable {
     private TextArea classroomTextArea;
@@ -20,6 +39,13 @@ public class KamokuController implements Initializable {
     private ComboBox<String> subjectGroupChoice;
     @FXML
     private ComboBox<String> subjectChoice;
+
+    static Jugyou[] kijiku = new Jugyou[31];
+    static Jugyou[] gendai = new Jugyou[23];
+    static Jugyou[] ryugaku = new Jugyou[7];
+    static Jugyou[] rikei = new Jugyou[58];
+    static Jugyou[] kyosyoku = new Jugyou[23];
+    static Jugyou[] kyoutu = new Jugyou[22];
 
     public ComboBox<String> getSubjectGroupChoice() {
         return subjectGroupChoice;
@@ -40,23 +66,131 @@ public class KamokuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        subjectGroupChoice.getItems().add("１");
-        subjectGroupChoice.getItems().add("２");
-        subjectGroupChoice.getItems().add("３");
-        subjectGroupChoice.getItems().add("４");
-        subjectGroupChoice.getItems().add("５");
+        subjectGroupChoice.getItems().add("基軸教育科目");
+        subjectGroupChoice.getItems().add("現代教養科目");
+        subjectGroupChoice.getItems().add("留学生科目");
+        subjectGroupChoice.getItems().add("教職等資格科目");
+        subjectGroupChoice.getItems().add("理系科目");
+        subjectGroupChoice.getItems().add("学部共通科目");
 
         subjectGroupChoice.getSelectionModel().select(-1);
     }
 
     public void subjectGroupChoiced(ActionEvent event) {//科目群の選択をしたら
+        Scanner stdIn = new Scanner(System.in);
         ComboBox c = (ComboBox)event.getSource();
         System.out.println( "選択:"+(String)c.getValue() ) ;
-        if(c.getValue().equals("１")){
-            subjectChoice.getItems().add("１");
-            subjectChoice.getItems().add("２");
+        String str;
+
+        if(c.getValue().equals("基軸教育科目")){
+            subjectChoice.getItems().clear();
+            try {
+                    File file  = new File("基軸教育科目.csv");
+                    Scanner sc = new Scanner(file);
+                
+                    while(sc.hasNextLine()){
+                        str = sc.nextLine();               
+                        String[] re = str.split(",", 0);
+                        Jugyou kijiku = new Jugyou(str);
+                        String kijiku2 = "" + kijiku;
+                        subjectChoice.getItems().add(kijiku2);
+                    }
+                } catch (FileNotFoundException e){
+                    System.err.print(e);
+                }
             subjectChoice.getSelectionModel().select(-1);
         }
+        if(c.getValue().equals("現代教養科目")){
+            subjectChoice.getItems().clear();
+            try {
+                    File file  = new File("現代教養科目.csv");
+                    Scanner sc = new Scanner(file);
+                
+                    while(sc.hasNextLine()){
+                        str = sc.nextLine();               
+                        String[] re = str.split(",", 0);
+                        Jugyou gendai = new Jugyou(str);
+                        String gendai2 = "" + gendai;
+                        subjectChoice.getItems().add(gendai2);
+                    }
+                } catch (FileNotFoundException e){
+                    System.err.print(e);
+                }
+            subjectChoice.getSelectionModel().select(-1);
+        }
+        if(c.getValue().equals("留学生科目")){
+            subjectChoice.getItems().clear();
+            try {
+                    File file  = new File("留学生科目.csv");
+                    Scanner sc = new Scanner(file);
+                
+                    while(sc.hasNextLine()){
+                        str = sc.nextLine();               
+                        String[] re = str.split(",", 0);
+                        Jugyou ryugaku = new Jugyou(str);
+                        String ryugaku2 = "" + ryugaku;
+                        subjectChoice.getItems().add(ryugaku2);
+                    }
+                } catch (FileNotFoundException e){
+                    System.err.print(e);
+                }
+            subjectChoice.getSelectionModel().select(-1);
+        }
+        if(c.getValue().equals("教職等資格科目")){
+            subjectChoice.getItems().clear();
+            try {
+                    File file  = new File("教職等資格科目.csv");
+                    Scanner sc = new Scanner(file);
+                
+                    while(sc.hasNextLine()){
+                        str = sc.nextLine();               
+                        String[] re = str.split(",", 0);
+                        Jugyou kyosyoku = new Jugyou(str);
+                        String kyosyoku2 = "" + kyosyoku;
+                        subjectChoice.getItems().add(kyosyoku2);
+                    }
+                } catch (FileNotFoundException e){
+                    System.err.print(e);
+                }
+            subjectChoice.getSelectionModel().select(-1);
+        }
+        if(c.getValue().equals("理系科目")){
+            subjectChoice.getItems().clear();
+            try {
+                    File file  = new File("理系科目.csv");
+                    Scanner sc = new Scanner(file);
+                
+                    while(sc.hasNextLine()){
+                        str = sc.nextLine();               
+                        String[] re = str.split(",", 0);
+                        Jugyou rikei = new Jugyou(str);
+                        String rikei2 = "" + rikei;
+                        subjectChoice.getItems().add(rikei2);
+                    }
+                } catch (FileNotFoundException e){
+                    System.err.print(e);
+                }
+            subjectChoice.getSelectionModel().select(-1);
+        }
+        if(c.getValue().equals("学部共通科目")){
+            subjectChoice.getItems().clear();
+            try {
+                    File file  = new File("学部共通科目.csv");
+                    Scanner sc = new Scanner(file);
+                
+                    while(sc.hasNextLine()){
+                        str = sc.nextLine();               
+                        String[] re = str.split(",", 0);
+                        Jugyou kyoutu = new Jugyou(str);
+                        String kyoutu2 = "" + kyoutu;
+                        subjectChoice.getItems().add(kyoutu2);
+                    }
+                } catch (FileNotFoundException e){
+                    System.err.print(e);
+                }
+            subjectChoice.getSelectionModel().select(-1);
+        }
+
     }
 
     public void subjectChoiced(ActionEvent event) {//科目を選択したら
