@@ -81,6 +81,7 @@ public class KamokuController implements Initializable {
         subjectGroupChoice.getItems().add("学部共通科目");
 
         subjectGroupChoice.getSelectionModel().select(-1);
+        absenceLabel.setText("0回");
     }
 
     public void subjectGroupChoiced(ActionEvent event) {//科目群の選択をしたら
@@ -222,8 +223,13 @@ public class KamokuController implements Initializable {
 
     public void downAbsenceAction(ActionEvent event) {//欠席カウントdown
         x = x - 1;
-        absenceLabel.setText( + x + "回");
+        if(x >= 0){
+            absenceLabel.setText( + x + "回");
         System.out.println("欠席回数：" + x);
+        }else{
+            absenceLabel.setText("0回");
+            System.out.println("欠席回数：0");
+        }
     }
 
     public void getTani(ActionEvent event) {//単位取得のチェックしたら

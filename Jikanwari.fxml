@@ -913,5 +913,6 @@
          </center>
       </BorderPane>
       <Button layoutX="433.0" layoutY="632.0" mnemonicParsing="false" onAction="#jikanwariSaveAction" text="保存" />
+      <Button layoutX="390.0" layoutY="16.0" mnemonicParsing="false" onAction="#checkTani" text="単位取得確認" />
    </children>
 </AnchorPane>

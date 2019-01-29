@@ -164,6 +164,10 @@ public class JikanwariController implements Initializable {
     public void kamokuAction(ActionEvent event) {//時間割コマを押すと
         System.out.println("Kamoku select");
         KamokuController.initialize();
+    }
+    
+    public void checkTani(ActionEvent event) {//単位取得確認ボタンを押すと
+
     }    
 
     public static void initialize() {
@@ -174,8 +178,6 @@ public class JikanwariController implements Initializable {
         System.out.println("reStart");
         Jikanwari.jikanwariReStart();
     }
-
-
 
     public Label getMon1Subject() {
         return mon1Subject;
