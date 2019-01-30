@@ -33,10 +33,6 @@ class Jugyou {
     }
 }
 
-class ReturnTani{
-    
-}
-
 public class KamokuController implements Initializable {
     int x = 0;
     private TextArea classroomTextArea;
@@ -181,22 +177,11 @@ public class KamokuController implements Initializable {
             try {
                 File file  = new File("基軸教育科目.csv");
                 Scanner sc = new Scanner(file);
-                /*while(sc.hasNextLine()){
-                    str = sc.nextLine();               
-                    String[] re = str.split(",", 0);
-                    Jugyou jugyou = new Jugyou(str);
-                    String kamoku2 = jugyou.toString();
-                    if(kamoku.equals(kamoku2)){
-                        String tani = jugyou.getTani();
-                        System.out.println("保存:"+kamokugun+","+kamoku+","+tani);
-                        Jikanwari.save(kamokugun+","+kamoku+","+tani);//add
-                    }
-                }*/
                 saveKamokuToTani(sc,kamokugun,kamoku);
             } catch (FileNotFoundException e){
                 System.err.print(e);
             }
-        }else if(c.getValue().equals("現代教養科目")){
+        }else if(kamokugun.equals("現代教養科目")){
             try {
                 File file  = new File("現代教養科目.csv");
                 Scanner sc = new Scanner(file);
@@ -204,7 +189,7 @@ public class KamokuController implements Initializable {
             } catch (FileNotFoundException e){
                 System.err.print(e);
             }
-        }else if(c.getValue().equals("留学生科目")){
+        }else if(kamokugun.equals("留学生科目")){
             try {
                 File file  = new File("留学生科目.csv");
                 Scanner sc = new Scanner(file);
@@ -212,7 +197,7 @@ public class KamokuController implements Initializable {
             } catch (FileNotFoundException e){
                 System.err.print(e);
             }
-        }else if(c.getValue().equals("教職等資格科目")){
+        }else if(kamokugun.equals("教職等資格科目")){
             try {
                 File file  = new File("教職等資格科目.csv");
                 Scanner sc = new Scanner(file);
@@ -220,7 +205,7 @@ public class KamokuController implements Initializable {
             } catch (FileNotFoundException e){
                 System.err.print(e);
             }
-        }else if(c.getValue().equals("理系科目")){
+        }else if(kamokugun.equals("理系科目")){
             try {
                 File file  = new File("理系科目.csv");
                 Scanner sc = new Scanner(file);
@@ -228,7 +213,7 @@ public class KamokuController implements Initializable {
             } catch (FileNotFoundException e){
                 System.err.print(e);
             }
-        }else if(c.getValue().equals("学部共通科目")){
+        }else if(kamokugun.equals("学部共通科目")){
             try {
                 File file  = new File("学部共通科目.csv");
                 Scanner sc = new Scanner(file);
