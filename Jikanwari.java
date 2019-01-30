@@ -14,13 +14,13 @@ public class Jikanwari extends Application {
     private static Scene otherScene;
     public static int koma = 5;//add
     public static int youbi = 5;//add
-    public static String saveKomaAndYoubiFile="test2.csv";//add
+    public static String saveKomaAndYoubiFile = "KomaAndYoubiSave.csv";//add
     public static int ckoma,cyoubi;//add
     public static SandL sal;//add
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        sal=new SandL(koma,youbi,saveKomaAndYoubiFile);//add
+        sal = new SandL(koma,youbi,saveKomaAndYoubiFile);//add
         sal.loadFile();//add
         stage = primaryStage;
         primaryStage.setTitle("JIKANWARI");
