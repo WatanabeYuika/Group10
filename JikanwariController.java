@@ -7,13 +7,16 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 
 public class JikanwariController implements Initializable {
     @FXML private ComboBox<String> termComboBox;
+
     private static Label subjectLavel[];
     private static Label teacherLavel[];
     private static Label classRoomLavel[];
     private static Label memoLavel[];
+
     @FXML private Label mon1Subject;
     @FXML private Label mon1Teacher;
     @FXML private Label mon1ClassRoom;
@@ -114,6 +117,12 @@ public class JikanwariController implements Initializable {
     @FXML private Label fri5Teacher;
     @FXML private Label fri5ClassRoom;
     @FXML private Label fri5Memo;
+
+    @FXML private TextArea monText;//getText()でテキストフィールドのように取得できます
+    @FXML private TextArea tueText;
+    @FXML private TextArea wedText;
+    @FXML private TextArea TurText;
+    @FXML private TextArea friText;
 
     public ComboBox<String> getTermComboBox() {
         return termComboBox;
