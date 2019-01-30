@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Button;
 
 public class JikanwariController implements Initializable {
     @FXML private ComboBox<String> termComboBox;
@@ -135,7 +136,7 @@ public class JikanwariController implements Initializable {
     }
 
     public void jikanwariSaveAction(ActionEvent event) {//保存ボタンを押したら
-
+        Jikanwari.saving();//add
     }
 
     public void termComboBoxCoiced( ActionEvent e ){//セメスターを選択したら
@@ -162,9 +163,18 @@ public class JikanwariController implements Initializable {
     }
     
     public void kamokuAction(ActionEvent event) {//時間割コマを押すと
+        Button b=(Button)event.getSource();//add
+        String sid=b.getId();//add
+        int id=Integer.parseInt(sid);//add
+        Jikanwari.ckoma=id/5;//add
+        Jikanwari.cyoubi=id%5;//add
         System.out.println("Kamoku select");
         KamokuController.initialize();
     }    
+
+    public void checkTani(ActionEvent event) {//単位取得確認ボタンを押すと
+
+    } 
 
     public static void initialize() {
         System.out.println("start");
@@ -174,7 +184,6 @@ public class JikanwariController implements Initializable {
         System.out.println("reStart");
         Jikanwari.jikanwariReStart();
     }
-
 
 
     public Label getMon1Subject() {

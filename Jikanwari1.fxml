@@ -385,7 +385,7 @@
                   <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
                   <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
                   <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-                  <Button fx:id="0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <graphic>
                         <GridPane>
                           <columnConstraints>
@@ -405,7 +405,7 @@
                            </children>
                         </GridPane>
                      </graphic></Button>
-                  <Button fx:id="1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -425,7 +425,7 @@
                            </children>
                         </GridPane>
                      </graphic></Button>
-                  <Button fx:id="2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="70.0" prefWidth="87.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -446,7 +446,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -467,7 +467,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -488,7 +488,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -509,7 +509,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -530,7 +530,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -551,7 +551,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -572,7 +572,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -593,7 +593,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -614,7 +614,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="11" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -635,7 +635,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="12" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -656,7 +656,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="13" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -677,7 +677,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="14" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -698,7 +698,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="15" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -719,7 +719,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="16" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -740,7 +740,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="17" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -761,7 +761,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="18" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -782,7 +782,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="19" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -803,7 +803,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="20" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -824,7 +824,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="21" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -845,7 +845,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="22" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -866,7 +866,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="23" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
@@ -887,7 +887,7 @@
                         </GridPane>
                      </graphic>
                   </Button>
-                  <Button fx:id="24" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
                      <graphic>
                         <GridPane>
                            <columnConstraints>
