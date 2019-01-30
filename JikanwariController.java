@@ -10,10 +10,10 @@ import javafx.scene.control.Button;
 
 public class JikanwariController implements Initializable {
     @FXML private ComboBox<String> termComboBox;
-    private Label subjectLavel[];
-    private Label teacherLavel[];
-    private Label classRoomLavel[];
-    private Label memoLavel[];
+    private static Label subjectLavel[];
+    private static Label teacherLavel[];
+    private static Label classRoomLavel[];
+    private static Label memoLavel[];
     @FXML private Label mon1Subject;
     @FXML private Label mon1Teacher;
     @FXML private Label mon1ClassRoom;
@@ -140,7 +140,12 @@ public class JikanwariController implements Initializable {
         termComboBox.getItems().add("4年前期");
        
         termComboBox.getSelectionModel().select(-1);//0ならコンボボックスの1番上の表示(1年前期)
-      
+
+        initialize();
+        
+    }
+
+    public static void initialize(){
         for(int i=0;i<25;i++){
             String[] str=Jikanwari.sal.data[i/5][i%5].split(",");
             if(str.length>1){
@@ -194,6 +199,7 @@ public class JikanwariController implements Initializable {
     public static void reStart() {
         System.out.println("reStart");
         Jikanwari.jikanwariReStart();
+        initialize();
     }
 
 }
