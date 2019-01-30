@@ -8,6 +8,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.util.Scanner;
@@ -36,7 +37,7 @@ public class KamokuController implements Initializable {
     int x = 0;
     @FXML private TextField classroomTextFeild;
     @FXML private TextField teacherTextFeild;
-    @FXML private TextField memoTextFeild;
+    @FXML private TextArea memoTextFeild;
     private CheckBox taniCheck;
     public String kamokugun = null;
     public String kamoku = "";
@@ -86,11 +87,11 @@ public class KamokuController implements Initializable {
         this.classroomTextFeild = classroomTextFeild;
     }
 
-    public TextField getMemoTextFeild(){
+    public TextArea getMemoTextArea(){
         return memoTextFeild;
     }
 
-    public void setMemoFeild(TextField memoTextFeild){
+    public void setMemoArea(TextArea memoTextFeild){
         this.memoTextFeild = memoTextFeild;
     }
 
