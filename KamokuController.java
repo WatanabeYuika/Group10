@@ -12,6 +12,7 @@ import javafx.scene.control.TextArea;
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.util.Scanner;
+import javafx.scene.control.TextField;
 
 class Jugyou {
     private String kamoku; //授業名
@@ -30,9 +31,12 @@ class Jugyou {
 
 public class KamokuController implements Initializable {
     int x = 0;
-    private TextArea classroomTextArea;
-    private TextArea teacherTextArea;
-    private TextArea memoTextArea;
+    //private TextArea classroomTextArea;
+    //private TextArea teacherTextArea;
+    //private TextArea memoTextArea;
+    @FXML private TextField classroomTextArea;
+    @FXML private TextField teacherTextArea;
+    @FXML private TextField memoTextArea;
     private CheckBox taniCheck;
     public String kamokugun,kamoku;
 
@@ -210,7 +214,10 @@ public class KamokuController implements Initializable {
     }
 
     public void saveAction(ActionEvent event) {//OKボタンを押すと
-       	Jikanwari.save(kamokugun+","+kamoku);
+       	Jikanwari.save(kamokugun+","+kamoku+","+x+","+
+		       classroomTextArea.getText()+","+
+		       teacherTextArea.getText()+","+
+		       memoTextArea.getText());
 	Jikanwari.jikanwariStart();
     }
 

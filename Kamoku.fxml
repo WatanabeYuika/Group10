@@ -4,7 +4,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -24,17 +24,17 @@
       </Label>
       <Label contentDisplay="RIGHT" layoutX="57.0" layoutY="271.0" text="教室">
          <graphic>
-            <TextArea fx:id="classroomTextArea" prefHeight="44.0" prefWidth="194.0" />
+            <TextField fx:id="classroomTextArea" prefHeight="44.0" prefWidth="194.0" />
          </graphic>
       </Label>
       <Label contentDisplay="RIGHT" layoutX="57.0" layoutY="208.0" text="担任">
          <graphic>
-            <TextArea fx:id="teacherTextArea" prefHeight="44.0" prefWidth="194.0" />
+            <TextField fx:id="teacherTextArea" prefHeight="44.0" prefWidth="194.0" />
          </graphic>
       </Label>
       <Label contentDisplay="BOTTOM" layoutX="28.0" layoutY="363.0" prefHeight="142.0" prefWidth="141.0" text="メモ">
          <graphic>
-            <TextArea fx:id="memoTextArea" layoutX="50.0" layoutY="1000.0" prefHeight="121.0" prefWidth="140.0" />
+            <TextField fx:id="memoTextArea" layoutX="50.0" layoutY="1000.0" prefHeight="121.0" prefWidth="140.0" />
          </graphic>
       </Label>
       <Label contentDisplay="RIGHT" layoutX="169.0" layoutY="355.0" prefHeight="55.0" prefWidth="141.0" text="欠席">
