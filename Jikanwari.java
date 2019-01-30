@@ -72,6 +72,7 @@ public class Jikanwari extends Application {
 
     public static void save(String str){//add
         sal.data[ckoma][cyoubi]=str;
+        sal.saveFile();
     }
 
     public static void saving(){//add
