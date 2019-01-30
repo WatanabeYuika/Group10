@@ -4,7 +4,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -13,19 +12,19 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane accessibleText="String" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JikanwariController">
+<AnchorPane accessibleText="String" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JikanwariController">
    <children>
-      <ComboBox fx:id="termComboBox" layoutX="14.0" layoutY="14.0" onAction="#termComboBoxCoiced" prefWidth="150.0" />
+      <ComboBox fx:id="termComboBox" layoutX="14.0" layoutY="8.0" onAction="#termComboBoxCoiced" prefWidth="150.0" />
       <BorderPane layoutX="69.0" layoutY="36.0" prefHeight="615.0" prefWidth="390.0">
          <center>
-            <GridPane focusTraversable="true" gridLinesVisible="true" maxHeight="574.0" maxWidth="391.0" minHeight="500.0" minWidth="300.0" prefHeight="526.0" prefWidth="365.0" BorderPane.alignment="CENTER">
+            <GridPane focusTraversable="true" gridLinesVisible="true" maxHeight="606.0" maxWidth="546.0" minHeight="500.0" minWidth="300.0" prefHeight="606.0" prefWidth="546.0" BorderPane.alignment="CENTER">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="55.0" prefWidth="55.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.33331298828125" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="40.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="55.0" prefWidth="55.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="40.0" prefWidth="100.33331298828125" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="40.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="40.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="40.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="40.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                   <RowConstraints maxHeight="67.33332824707031" minHeight="0.0" prefHeight="36.00000762939453" vgrow="SOMETIMES" />
@@ -37,282 +36,7 @@
                 <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Line endX="-49.742645263671875" endY="-7.7425994873046875" startX="-104.03553771972656" startY="-27.035491943359375" />
-                  <GridPane GridPane.rowIndex="1">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="35.33332824707031" minHeight="10.0" prefHeight="20.666671752929688" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.33332824707031" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <GridPane GridPane.rowIndex="1">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="15.333328247070312" minHeight="10.0" prefHeight="15.333328247070312" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.333353519439697" GridPane.columnIndex="1" />
-                                    <TextField />
-                                    <TextField GridPane.columnIndex="2" />
-                                 </children>
-                              </GridPane>
-                              <GridPane GridPane.rowIndex="2">
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="1" />
-                                    <TextField />
-                                    <TextField GridPane.columnIndex="2" />
-                                 </children>
-                              </GridPane>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="～" textAlignment="CENTER" wrappingWidth="55.31638526916504" GridPane.rowIndex="1" />
-                           </children>
-                        </GridPane>
-                        <TextField prefHeight="19.0" prefWidth="55.0" />
-                     </children>
-                  </GridPane>
-                  <GridPane GridPane.rowIndex="2">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="35.33332824707031" minHeight="10.0" prefHeight="20.666671752929688" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.33332824707031" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <TextField prefHeight="11.0" prefWidth="44.0" />
-                        <GridPane GridPane.rowIndex="1">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="15.333328247070312" minHeight="10.0" prefHeight="15.333328247070312" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.333353519439697" GridPane.columnIndex="1" />
-                                    <TextField />
-                                    <TextField GridPane.columnIndex="2" />
-                                 </children>
-                              </GridPane>
-                              <GridPane GridPane.rowIndex="2">
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="1" />
-                                    <TextField />
-                                    <TextField GridPane.columnIndex="2" />
-                                 </children>
-                              </GridPane>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="～" textAlignment="CENTER" wrappingWidth="55.98307228088379" GridPane.rowIndex="1" />
-                           </children>
-                        </GridPane>
-                     </children>
-                  </GridPane>
-                  <GridPane GridPane.rowIndex="3">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="35.33332824707031" minHeight="10.0" prefHeight="20.666671752929688" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.33332824707031" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <GridPane GridPane.rowIndex="1">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="15.333328247070312" minHeight="10.0" prefHeight="15.333328247070312" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.333353519439697" GridPane.columnIndex="1" />
-                                    <TextField />
-                                    <TextField GridPane.columnIndex="2" />
-                                 </children>
-                              </GridPane>
-                              <GridPane GridPane.rowIndex="2">
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="1" />
-                                    <TextField />
-                                    <TextField GridPane.columnIndex="2" />
-                                 </children>
-                              </GridPane>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="～" textAlignment="CENTER" wrappingWidth="55.31638526916504" GridPane.rowIndex="1" />
-                           </children>
-                        </GridPane>
-                        <TextField prefHeight="19.0" prefWidth="55.0" />
-                     </children>
-                  </GridPane>
-                  <GridPane GridPane.rowIndex="4">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="35.33332824707031" minHeight="10.0" prefHeight="20.666671752929688" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.33332824707031" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <GridPane GridPane.rowIndex="1">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="15.333328247070312" minHeight="10.0" prefHeight="15.333328247070312" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.333353519439697" GridPane.columnIndex="1" />
-                                    <TextField />
-                                    <TextField GridPane.columnIndex="2" />
-                                 </children>
-                              </GridPane>
-                              <GridPane GridPane.rowIndex="2">
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="1" />
-                                    <TextField />
-                                    <TextField GridPane.columnIndex="2" />
-                                 </children>
-                              </GridPane>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="～" textAlignment="CENTER" wrappingWidth="55.98307228088379" GridPane.rowIndex="1" />
-                           </children>
-                        </GridPane>
-                        <TextField prefHeight="8.0" prefWidth="55.0" />
-                     </children>
-                  </GridPane>
-                  <GridPane GridPane.rowIndex="5">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="35.33332824707031" minHeight="10.0" prefHeight="20.666671752929688" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.33332824707031" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <GridPane GridPane.rowIndex="1">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="15.333328247070312" minHeight="10.0" prefHeight="15.333328247070312" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <GridPane>
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.333353519439697" GridPane.columnIndex="1" />
-                                    <TextField />
-                                    <TextField GridPane.columnIndex="2" />
-                                 </children>
-                              </GridPane>
-                              <GridPane GridPane.rowIndex="2">
-                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="1" />
-                                    <TextField />
-                                    <TextField GridPane.columnIndex="2" />
-                                 </children>
-                              </GridPane>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="～" textAlignment="CENTER" wrappingWidth="55.31638526916504" GridPane.rowIndex="1" />
-                           </children>
-                        </GridPane>
-                        <TextField prefHeight="19.0" prefWidth="55.0" />
-                     </children>
-                  </GridPane>
+                  <Line endX="-4.8542022705078125" endY="-19.138442993164062" startX="-56.813720703125" startY="-65.43133544921875" />
                   <GridPane prefHeight="55.0" prefWidth="165.0" GridPane.columnIndex="1">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.33331298828125" minWidth="10.0" prefWidth="32.0" />
@@ -379,12 +103,11 @@
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="金" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
-                  <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.rowIndex="6" />
                   <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
                   <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
                   <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-                  <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                  <TextArea cacheShape="false" centerShape="false" prefHeight="55.0" prefWidth="44.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
                   <Button fx:id="0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <graphic>
                         <GridPane>
@@ -398,10 +121,10 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label fx:id="mon1Subject" />
-                              <Label fx:id="mon1Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="mon1ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="mon1Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="mon1Subject" prefHeight="16.0" prefWidth="61.0" textAlignment="CENTER" />
+                              <Label fx:id="mon1Teacher" prefHeight="16.0" prefWidth="89.0" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="mon1ClassRoom" prefHeight="16.0" prefWidth="61.0" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="mon1Memo" prefHeight="16.0" prefWidth="69.0" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic></Button>
@@ -418,10 +141,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="tue1Subject" />
-                              <Label fx:id="tue1Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="tue1ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="tue1Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="tue1Subject" prefHeight="16.0" prefWidth="60.0" textAlignment="CENTER" />
+                              <Label fx:id="tue1Teacher" prefHeight="16.0" prefWidth="70.0" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="tue1ClassRoom" prefHeight="16.0" prefWidth="79.0" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="tue1Memo" prefHeight="16.0" prefWidth="71.0" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic></Button>
@@ -438,10 +161,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="wed1Subject" />
-                              <Label fx:id="wed1Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="wed1ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="wed1Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="wed1Subject" textAlignment="CENTER" />
+                              <Label fx:id="wed1Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="wed1ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="wed1Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -459,10 +182,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="tur1Subject" />
-                              <Label fx:id="tur1Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="tur1ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="tur1Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="tur1Subject" prefHeight="16.0" prefWidth="81.0" textAlignment="CENTER" />
+                              <Label fx:id="tur1Teacher" prefHeight="16.0" prefWidth="72.0" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="tur1ClassRoom" prefHeight="16.0" prefWidth="77.0" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="tur1Memo" prefHeight="16.0" prefWidth="87.0" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -480,10 +203,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="fri1Subject" />
-                              <Label fx:id="fri1Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="fri1ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="fri1Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="fri1Subject" textAlignment="CENTER" />
+                              <Label fx:id="fri1Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="fri1ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="fri1Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -501,10 +224,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="mon2Subject" />
-                              <Label fx:id="mon2Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="mon2ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="mon2Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="mon2Subject" textAlignment="CENTER" />
+                              <Label fx:id="mon2Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="mon2ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="mon2Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -522,10 +245,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="tue2Subject" />
-                              <Label fx:id="tue2Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="tue2ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="tue2Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="tue2Subject" textAlignment="CENTER" />
+                              <Label fx:id="tue2Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="tue2ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="tue2Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -543,10 +266,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="wed2Subject" />
-                              <Label fx:id="wed2Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="wed2ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="wed2Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="wed2Subject" textAlignment="CENTER" />
+                              <Label fx:id="wed2Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="wed2ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="wed2Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -564,10 +287,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="tur2Subject" />
-                              <Label fx:id="tur2Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="tur2ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="tur2Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="tur2Subject" textAlignment="CENTER" />
+                              <Label fx:id="tur2Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="tur2ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="tur2Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -585,10 +308,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="fri2Subject" />
-                              <Label fx:id="fri2Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="fri2ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="fri2Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="fri2Subject" textAlignment="CENTER" />
+                              <Label fx:id="fri2Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="fri2ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="fri2Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -606,10 +329,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="mon3Subject" />
-                              <Label fx:id="mon3Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="mon3ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="mon3Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="mon3Subject" textAlignment="CENTER" />
+                              <Label fx:id="mon3Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="mon3ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="mon3Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -627,10 +350,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="tue3Subject" />
-                              <Label fx:id="tue3Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="tue3ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="tue3Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="tue3Subject" textAlignment="CENTER" />
+                              <Label fx:id="tue3Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="tue3ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="tue3Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -648,10 +371,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="wed3Subject" />
-                              <Label fx:id="wed3Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="wed3ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="wed3Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="wed3Subject" textAlignment="CENTER" />
+                              <Label fx:id="wed3Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="wed3ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="wed3Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -669,10 +392,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="tur3Subject" />
-                              <Label fx:id="tur3Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="tur3ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="tur3Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="tur3Subject" textAlignment="CENTER" />
+                              <Label fx:id="tur3Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="tur3ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="tur3Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -690,10 +413,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="fri3Subject" />
-                              <Label fx:id="fri3Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="fri3ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="fri3Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="fri3Subject" textAlignment="CENTER" />
+                              <Label fx:id="fri3Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="fri3ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="fri3Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -711,10 +434,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="mon4Subject" />
-                              <Label fx:id="mon4Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="mon4ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="mon4Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="mon4Subject" textAlignment="CENTER" />
+                              <Label fx:id="mon4Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="mon4ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="mon4Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -732,10 +455,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="tue4Subject" />
-                              <Label fx:id="tue4Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="tue4ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="tue4Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="tue4Subject" textAlignment="CENTER" />
+                              <Label fx:id="tue4Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="tue4ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="tue4Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -753,10 +476,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="wed4Subject" />
-                              <Label fx:id="wed4Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="wed4ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="wed4Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="wed4Subject" textAlignment="CENTER" />
+                              <Label fx:id="wed4Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="wed4ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="wed4Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -774,10 +497,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="tur4Subject" />
-                              <Label fx:id="tur4Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="tur4ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="tur4Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="tur4Subject" textAlignment="CENTER" />
+                              <Label fx:id="tur4Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="tur4ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="tur4Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -795,10 +518,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="fri4Subject" />
-                              <Label fx:id="fri4Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="fri4ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="fri4Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="fri4Subject" textAlignment="CENTER" />
+                              <Label fx:id="fri4Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="fri4ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="fri4Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -816,10 +539,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="mon5Subject" />
-                              <Label fx:id="mon5Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="mon5ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="mon5Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="mon5Subject" textAlignment="CENTER" />
+                              <Label fx:id="mon5Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="mon5ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="mon5Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -837,10 +560,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="tue5Subject" />
-                              <Label fx:id="tue5Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="tue5ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="tue5Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="tue5Subject" textAlignment="CENTER" />
+                              <Label fx:id="tue5Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="tue5ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="tue5Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -858,10 +581,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="wed5Subject" />
-                              <Label fx:id="wed5Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="wed5ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="wed5Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="wed5Subject" textAlignment="CENTER" />
+                              <Label fx:id="wed5Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="wed5ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="wed5Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -879,10 +602,10 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="tur5Subject" />
-                              <Label fx:id="tur5Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="tur5ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="tur5Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="tur5Subject" textAlignment="CENTER" />
+                              <Label fx:id="tur5Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="tur5ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="tur5Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
@@ -900,19 +623,295 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label fx:id="fri5Subject" />
-                              <Label fx:id="fri5Teacher" GridPane.rowIndex="1" />
-                              <Label fx:id="fri5ClassRoom" GridPane.rowIndex="2" />
-                              <Label fx:id="fri5Memo" GridPane.rowIndex="3" />
+                              <Label fx:id="fri5Subject" textAlignment="CENTER" />
+                              <Label fx:id="fri5Teacher" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="fri5ClassRoom" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="fri5Memo" textAlignment="CENTER" GridPane.rowIndex="3" />
                            </children>
                         </GridPane>
                      </graphic>
                   </Button>
+                  <GridPane fx:id="gridPain0_1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="35.33332824707031" minHeight="10.0" prefHeight="20.666671752929688" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.33332824707031" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="15.333328247070312" minHeight="10.0" prefHeight="15.333328247070312" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <GridPane prefHeight="22.0" prefWidth="44.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" wrappingWidth="15.999979496002197" />
+                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.333353519439697" GridPane.columnIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="40" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane prefHeight="27.0" prefWidth="40.0" GridPane.rowIndex="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="15.999979496002197" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="～" textAlignment="CENTER" wrappingWidth="55.31638526916504" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1コマ(1・2限)" textAlignment="CENTER" wrappingWidth="52.66663599014282" />
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="gridPain0_11" GridPane.rowIndex="2">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="35.33332824707031" minHeight="10.0" prefHeight="20.666671752929688" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.33332824707031" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="15.333328247070312" minHeight="10.0" prefHeight="15.333328247070312" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="15.999979496002197" />
+                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.333353519439697" GridPane.columnIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="20" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11" textAlignment="CENTER" wrappingWidth="15.999979496002197" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="50" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="～" textAlignment="CENTER" wrappingWidth="55.31638526916504" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2コマ(3・4限)" textAlignment="CENTER" wrappingWidth="52.66663599014282" />
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="gridPain0_12" GridPane.rowIndex="3">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="35.33332824707031" minHeight="10.0" prefHeight="20.666671752929688" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.33332824707031" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="15.333328247070312" minHeight="10.0" prefHeight="15.333328247070312" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12" textAlignment="CENTER" wrappingWidth="15.999979496002197" />
+                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.333353519439697" GridPane.columnIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="45" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="14" textAlignment="CENTER" wrappingWidth="15.999979496002197" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="15" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="～" textAlignment="CENTER" wrappingWidth="55.31638526916504" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3コマ(5・6限)" textAlignment="CENTER" wrappingWidth="52.66663599014282" />
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="gridPain0_13" GridPane.rowIndex="4">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="35.33332824707031" minHeight="10.0" prefHeight="20.666671752929688" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.33332824707031" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="15.333328247070312" minHeight="10.0" prefHeight="15.333328247070312" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="14" textAlignment="CENTER" wrappingWidth="15.999979496002197" />
+                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.333353519439697" GridPane.columnIndex="1" />                                    
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="25" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="15" textAlignment="CENTER" wrappingWidth="15.999979496002197" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="55" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="～" textAlignment="CENTER" wrappingWidth="55.31638526916504" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4コマ(7・8限)" textAlignment="CENTER" wrappingWidth="52.66663599014282" />
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="gridPain0_14" GridPane.rowIndex="5">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="35.33332824707031" minHeight="10.0" prefHeight="20.666671752929688" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="59.33332824707031" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.666671752929688" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="15.333328247070312" minHeight="10.0" prefHeight="15.333328247070312" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="16" textAlignment="CENTER" wrappingWidth="15.999979496002197" />
+                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.333353519439697" GridPane.columnIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="05" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <GridPane GridPane.rowIndex="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="17" textAlignment="CENTER" wrappingWidth="15.999979496002197" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="：" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="35" textAlignment="CENTER" wrappingWidth="15.999979496002197" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="～" textAlignment="CENTER" wrappingWidth="55.31638526916504" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5コマ(9・10限)" textAlignment="CENTER" wrappingWidth="52.66663599014282" />
+                     </children>
+                  </GridPane>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="放課後" textAlignment="CENTER" wrappingWidth="52.66663599014282" GridPane.rowIndex="6" />
                </children>
             </GridPane>
          </center>
       </BorderPane>
-      <Button layoutX="433.0" layoutY="632.0" mnemonicParsing="false" onAction="#jikanwariSaveAction" text="保存" />
-      <Button layoutX="390.0" layoutY="16.0" mnemonicParsing="false" onAction="#checkTani" text="単位取得確認" />
+      <Button layoutX="501.0" layoutY="635.0" mnemonicParsing="false" onAction="#jikanwariSaveAction" text="保存" />
+      <Button layoutX="459.0" layoutY="6.0" mnemonicParsing="false" onAction="#checkTani" prefHeight="32.0" prefWidth="97.0" text="単位取得確認" />
    </children>
 </AnchorPane>

@@ -12,6 +12,7 @@ public class Jikanwari extends Application {
     private static Stage stage;
     private static Scene myScene;
     private static Scene otherScene;
+    private static Scene keisanScene;
     public static int koma = 5;//add
     public static int youbi = 5;//add
     public static String saveKomaAndYoubiFile = "KomaAndYoubiSave.csv";//add
@@ -28,6 +29,8 @@ public class Jikanwari extends Application {
         myScene = new Scene(myPane_top);	
         Pane myPane_other = (Pane)FXMLLoader.load(getClass().getResource("Kamoku.fxml"));
         otherScene = new Scene(myPane_other); 
+        Pane myPane_keisan = (Pane)FXMLLoader.load(getClass().getResource("keisan.fxml"));
+        keisanScene = new Scene(myPane_keisan);
         primaryStage.setScene(myScene);
         primaryStage.show();
     }
@@ -44,6 +47,10 @@ public class Jikanwari extends Application {
         return otherScene;
     }
 
+    public static Scene getKeisanScene(){
+        return keisanScene;
+    }
+
     public static void jikanwariReStart(){
         getStage().setScene(getMyScene());
         getStage().show();
@@ -51,6 +58,11 @@ public class Jikanwari extends Application {
 
     public static void kamokuStart(){
         getStage().setScene(getOtherScene());
+        getStage().show();
+    }
+
+    public static void keisanStart(){
+        getStage().setScene(getKeisanScene());
         getStage().show();
     }
     
