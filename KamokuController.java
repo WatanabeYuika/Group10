@@ -238,8 +238,13 @@ public class KamokuController implements Initializable {
 
     public void downAbsenceAction(ActionEvent event) {//欠席カウントdown
         x = x - 1;
-        absenceLabel.setText( + x + "回");
-        System.out.println("欠席回数：" + x);
+        if(x >= 0){
+            absenceLabel.setText( + x + "回");
+            System.out.println("欠席回数：" + x);
+        }else{
+            absenceLabel.setText("0回");
+            System.out.println("欠席回数：0");
+        }   
     }
 
     public void getTani(ActionEvent event) {//単位取得のチェックしたら
@@ -263,7 +268,7 @@ public class KamokuController implements Initializable {
             
         }
     }
-    public void saveKamokuToTani(Scanner sc,String kamokugun,String kamoku){
+    public void saveKamokuToTani(Scanner sc,String kamokugun,String kamoku){//保存する場所
         String str;
         while(sc.hasNextLine()){
             str = sc.nextLine();               
