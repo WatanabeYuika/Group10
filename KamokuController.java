@@ -110,7 +110,7 @@ public class KamokuController implements Initializable {
 
     public void subjectGroupChoiced(ActionEvent event) {//科目群の選択をしたら
         ComboBox c = (ComboBox)event.getSource();
-        System.out.println( "選択:"+(String)c.getValue() ) ;
+        System.out.println( "Select:"+(String)c.getValue() ) ;
 	    kamokugun = (String)c.getValue();
 
         if(c.getValue().equals("基軸教育科目")){
@@ -239,10 +239,10 @@ public class KamokuController implements Initializable {
                 System.err.print(e);
             }
         }else{
-            System.out.println("保存:"+kamokugun+","+kamoku+","+tani+","+x+","+
-                                       teacher+","+classroom+","+memo);
-            Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+
-                           teacher+","+classroom+","+memo);
+            System.out.println(JikanwariController.getTermComboBox().getValue() +"Save:"
+                                +kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
+            Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, 
+                           JikanwariController.getTermComboBox().getValue());
         }
         
         JikanwariController.initialize();//更新するように変更
