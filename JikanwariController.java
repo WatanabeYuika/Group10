@@ -136,8 +136,8 @@ public class JikanwariController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         subjectLavel = new Label[] {mon1Subject,tue1Subject,wed1Subject,tur1Subject,fri1Subject,mon2Subject,tue2Subject,wed2Subject,tur2Subject,fri2Subject,mon3Subject,tue3Subject,wed3Subject,tur3Subject,fri3Subject,mon4Subject,tue4Subject,wed4Subject,tur4Subject,fri4Subject,mon5Subject,tue5Subject,wed5Subject,tur5Subject,fri5Subject};
         teacherLavel = new Label[] {mon1Teacher,tue1Teacher,wed1Teacher,tur1Teacher,fri1Teacher,mon2Teacher,tue2Teacher,wed2Teacher,tur2Teacher,fri2Teacher,mon3Teacher,tue3Teacher,wed3Teacher,tur3Teacher,fri3Teacher,mon4Teacher,tue4Teacher,wed4Teacher,tur4Teacher,fri4Teacher,mon5Teacher,tue5Teacher,wed5Teacher,tur5Teacher,fri5Teacher};
-        //classRoomLavel = new Label[]{}//ここに上のよう入力してほしいです};
-        //memoLavel = new Label[]{}//ここに上のよう入力してほしいです};
+        classRoomLavel = new Label[]{mon1ClassRoom,tue1ClassRoom,wed1ClassRoom,tur1ClassRoom,fri1ClassRoom,mon2ClassRoom,tue2ClassRoom,wed2ClassRoom,tur2ClassRoom,fri2ClassRoom,mon3ClassRoom,tue3ClassRoom,wed3ClassRoom,tur3ClassRoom,fri3ClassRoom,mon4ClassRoom,tue4ClassRoom,wed4ClassRoom,tur4ClassRoom,fri4ClassRoom,mon5ClassRoom,tue5ClassRoom,wed5ClassRoom,tur5ClassRoom,fri5ClassRoom};
+        memoLavel = new Label[]{mon1Memo,tue1Memo,wed1Memo,tur1Memo,fri1Memo,mon2Memo,tue2Memo,wed2Memo,tur2Memo,fri2Memo,mon3Memo,tue3Memo,wed3Memo,tur3Memo,fri3Memo,mon4Memo,tue4Memo,wed4Memo,tur4Memo,fri4Memo,mon5Memo,tue5Memo,wed5Memo,tur5Memo,fri5Memo};
 
         termComboBox.getItems().add("1年前期");//コンボボックスリスト
         termComboBox.getItems().add("1年後期");
