@@ -170,36 +170,19 @@ public class JikanwariController implements Initializable {
                 memoLavel[i].setText(str[6]);//メモ
             }
         }
-        System.out.println("start");
+        System.out.println("Start");
     }
 
     public void jikanwariSaveAction(ActionEvent event) {//保存ボタンを押したら
-        Jikanwari.saving();//add
+        System.out.println("Save：" + getTermComboBox().getValue());
+        Jikanwari.saving(getTermComboBox().getValue());
     }
 
     public void termComboBoxCoiced( ActionEvent e ){//セメスターを選択したら
-        ComboBox c = (ComboBox)e.getSource();
-        System.out.println( "選択:"+(String)c.getValue() ) ;
+        System.out.println( "Select:"+(String)getTermComboBox().getValue() ) ;
+        Jikanwari.loadFile(getTermComboBox().getValue());
+    }    
 
-        if(c.getValue().equals("１年前期")){
-            Jikanwari.loadFile("１年前期");
-        }else if(c.getValue().equals("１年後期")){//似たようにお願いします
-
-        }else if(c.getValue().equals("２年前期")){
-
-        }else if(c.getValue().equals("２年後期")){
-
-        }else if(c.getValue().equals("３年前期")){
-        
-        }else if(c.getValue().equals("3年後期")){
-
-        }else if(c.getValue().equals("４年前期")){
-
-        }else if(c.getValue().equals("４年後期")){
-
-        }
-    }
-    
     public void kamokuAction(ActionEvent event) {//時間割コマを押すと
         Button b =(Button)event.getSource();//add
         String sid = b.getId();//add
