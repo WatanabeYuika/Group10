@@ -12,17 +12,24 @@ public class Jikanwari extends Application {
     private static Stage stage;
     private static Scene myScene;
     private static Scene otherScene;
+    public static int koma = 5;//add
+    public static int youbi = 5;//add
+    public static String saveKomaAndYoubiFile="test2.csv";//add
+    public static int ckoma,cyoubi;//add
+    public static SandL sal;//add
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-	stage = primaryStage;
-	primaryStage.setTitle("JIKANWARI");
-	Pane myPane_top = (Pane)FXMLLoader.load(getClass().getResource("Jikanwari.fxml"));   
-	myScene = new Scene(myPane_top);	
-    Pane myPane_other = (Pane)FXMLLoader.load(getClass().getResource("Kamoku.fxml"));
-    otherScene = new Scene(myPane_other); 
-    primaryStage.setScene(myScene);
-	primaryStage.show();
+        sal=new SandL(koma,youbi,saveKomaAndYoubiFile);//add
+        sal.loadFile();//add
+        stage = primaryStage;
+        primaryStage.setTitle("JIKANWARI");
+        Pane myPane_top = (Pane)FXMLLoader.load(getClass().getResource("Jikanwari.fxml"));   
+        myScene = new Scene(myPane_top);	
+        Pane myPane_other = (Pane)FXMLLoader.load(getClass().getResource("Kamoku.fxml"));
+        otherScene = new Scene(myPane_other); 
+        primaryStage.setScene(myScene);
+        primaryStage.show();
     }
 
     public static Stage getStage(){
@@ -49,5 +56,18 @@ public class Jikanwari extends Application {
     
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public static void save(String str){//add
+        sal.data[ckoma][cyoubi]=str;
+    }
+
+    public static void saving(){//add
+        sal.saveFile();
+    }
+
+    public static void jikanwariStart(){
+        getStage().setScene(getMyScene());
+        getStage().show();
     }
 }
