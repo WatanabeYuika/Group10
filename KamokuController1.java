@@ -34,83 +34,124 @@ class Jugyou {
 }
 
 public class KamokuController implements Initializable {
-    int x = 0;
-    @FXML private TextField classroomTextFeild;
-    @FXML private TextField teacherTextFeild;
-    @FXML private TextArea memoTextArea;
+    static int x = 0;
+    @FXML private static TextField classroomTextFeild;
+    @FXML private static TextField teacherTextFeild;
+    @FXML private static TextArea memoTextArea;
     private CheckBox taniCheck;
     public String kamokugun = null;
     public String kamoku = null;
     public String tani = null;// 単位の保存も
     public static String semester = null;
 
-    @FXML private Label absenceLabel;
-    @FXML private ComboBox<String> subjectGroupChoice;
-    @FXML private ComboBox<String> subjectChoice;
+    @FXML private static Label absenceLabel;
+    @FXML private static ComboBox<String> subjectGroupChoice;
+    @FXML private static ComboBox<String> subjectChoice;
 
-    public ComboBox<String> getSubjectGroupChoice() {
+    public static ComboBox<String> getSubjectGroupChoice() {
         return subjectGroupChoice;
     }
  
-    public void setSubjectGroupChoice(ComboBox<String> subjectGroupChoice) {
-        this.subjectGroupChoice = subjectGroupChoice;
+    public static void setSubjectGroupChoice(ComboBox<String> subjectGroup) {
+        subjectGroupChoice = subjectGroup;
     }
 
-    public ComboBox<String> getSubjectChoice() {
+    public static ComboBox<String> getSubjectChoice() {
         return subjectChoice;
     }
 
-    public void setSubjectChoice(ComboBox<String> subjectChoice) {
-        this.subjectChoice = subjectChoice;
+    public static void setSubjectChoice(ComboBox<String> subject) {
+        subjectChoice = subject;
     }
 
-    public Label getAbsenceLabel(){
+    public static Label getAbsenceLabel(){
         return absenceLabel;
     }
 
-    public void setAbsenceLabel(Label absenceLabel){
-        this.absenceLabel = absenceLabel;
+    public static void setAbsenceLabel(Label absence){
+        absenceLabel = absence;
     }
 
-    public TextField getTeacherFeild(){
+    public static TextField getTeacherFeild(){
         return classroomTextFeild;
     }
     
-    public void setTeacherFeild(TextField teacherTextFeild){
-        this.teacherTextFeild = teacherTextFeild;
+    public static void setTeacherFeild(TextField teacherText){
+        teacherTextFeild = teacherText;
     }
 
-    public TextField getClassroomTextFeild(){
+    public static TextField getClassroomTextFeild(){
         return classroomTextFeild;
     }
 
-    public void setClassroomFeild(TextField classroomTextFeild){
-        this.classroomTextFeild = classroomTextFeild;
+    public static void setClassroomFeild(TextField classroomText){
+        classroomTextFeild = classroomText;
     }
 
-    public TextArea getMemoTextArea(){
+    public static TextArea getMemoTextArea(){
         return memoTextArea;
     }
 
-    public void setMemoArea(TextArea memoTextArea){
-        this.memoTextArea = memoTextArea;
+    public static void setMemoArea(TextArea memoText){
+        memoTextArea = memoText;
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        subjectGroupChoice.getItems().add("");
-        subjectGroupChoice.getItems().add("基軸教育科目");
-        subjectGroupChoice.getItems().add("現代教養科目");
-        subjectGroupChoice.getItems().add("留学生科目");
-        subjectGroupChoice.getItems().add("教職等資格科目");
-        subjectGroupChoice.getItems().add("理系科目");
-        subjectGroupChoice.getItems().add("学部共通科目");
+    }
+    
+    public static void initialize(String term,int koma, int youbi) {
+        System.out.println("KamokuStart");
+        semester = term;
+        String st = null;
 
-        subjectGroupChoice.getSelectionModel().select(0);
+        getSubjectGroupChoice().getItems().add("");
+        getSubjectGroupChoice().getItems().add("基軸教育科目");
+        getSubjectGroupChoice().getItems().add("現代教養科目");
+        getSubjectGroupChoice().getItems().add("留学生科目");
+        getSubjectGroupChoice().getItems().add("教職等資格科目");
+        getSubjectGroupChoice().getItems().add("理系科目");
+        getSubjectGroupChoice().getItems().add("学部共通科目");
 
-        teacherTextFeild.clear();
-        classroomTextFeild.clear();
-        memoTextArea.clear();
+        if(semester == null){ 
+            subjectGroupChoice.getSelectionModel().select(0);
+        }else if(semester.equals("1年前期")){
+            st = Jikanwari.sal1Spring.loadData(koma, youbi);
+        
+               
+            String[] re = st.split(",", 7);
+            if(re[0].equals("基軸教育科目")){
+                subjectGroupChoice.getSelectionModel().select(1);
+                try {
+                    File file  = new File("基軸教育科目.csv");
+                    Scanner sc = new Scanner(file);
+                    String str;
+                    int i = 0;
+                    while(sc.hasNextLine()){
+                        str = sc.nextLine();               
+                        String[] r = str.split(",", 0);
+                        Jugyou jugyou = new Jugyou(str);
+                        String kamoku2 = jugyou.toString();
+                        subjectChoice.getItems().add(kamoku2);
+                        if(re[1].equals(kamoku2)){
+                            subjectChoice.getSelectionModel().select(i);
+                        }else{
+                            i++;
+                        }
+                    }
+                } catch (FileNotFoundException e){
+                    System.err.print(e);
+                }    
+            }
+
+            x = Integer.parseInt(re[3]);
+            absenceLabel.setText( + x + "回");
+    
+            teacherTextFeild.setPromptText(re[4]);
+            classroomTextFeild.setPromptText(re[5]);
+            memoTextArea.setPromptText(re[6]);
+        }
+        Jikanwari.kamokuStart();
     }
 
     public void subjectGroupChoiced(ActionEvent event) {//科目群の選択をしたら
@@ -119,9 +160,8 @@ public class KamokuController implements Initializable {
 	    kamokugun = (String)c.getValue();
         
         subjectChoice.getItems().clear();
-
         file(kamokugun,0,null,null,0,null,null,null);//0ファイル読み込み
-        
+
         subjectChoice.getSelectionModel().select(0);
     }
 
@@ -132,15 +172,8 @@ public class KamokuController implements Initializable {
     }
 
     public void backAction(ActionEvent event) {//←のボタンを押すと
-        System.out.println("Back");
-        subjectGroupChoice.getSelectionModel().select(0);
-        subjectChoice.getItems().clear();
-        x = 0;
-        teacherTextFeild.clear();
-        classroomTextFeild.clear();
-        memoTextArea.clear();
-
-        JikanwariController.reStart();
+       System.out.println("Back");
+       JikanwariController.reStart();
     }
 
     public void saveAction(ActionEvent event) {//OKボタンを押すと
@@ -149,17 +182,14 @@ public class KamokuController implements Initializable {
         String teacher = (String)teacherTextFeild.getText();
         String classroom = (String)classroomTextFeild.getText();
         String memo = (String)memoTextArea.getText();
-        
-        file(kamokugun,1,kamokugun,kamoku,x,teacher,classroom,memo);//1ファイル保存
 
+        file(kamokugun,1,kamokugun,kamoku,x,teacher,classroom,memo);//1ファイル保存
+        
         if(kamokugun.equals("")){
             System.out.println(semester + " Save:"+ kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
             Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, semester);
         }
         
-        teacherTextFeild.clear();
-        classroomTextFeild.clear();
-        memoTextArea.clear();
         JikanwariController.initialize();//更新するように変更
         Jikanwari.jikanwariStart();//add
     }
@@ -168,26 +198,32 @@ public class KamokuController implements Initializable {
         System.out.println("delete");
         subjectGroupChoice.getSelectionModel().select(0);
         subjectChoice.getItems().clear();
-        x = 0;
         teacherTextFeild.clear();
         classroomTextFeild.clear();
         memoTextArea.clear();
+
+        String teacher = (String)teacherTextFeild.getText();
+        String classroom = (String)classroomTextFeild.getText();
+        String memo = (String)memoTextArea.getText();
+
+        System.out.println(semester + " Save:"+ kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
+        Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, semester);
     }
 
     public void upAbsenceAction(ActionEvent event) {//欠席カウントup
         x = x + 1;
         absenceLabel.setText( + x + "回");
-        System.out.println("Abesence Count："+ x);
+        System.out.println("AbsenceCount："+ x);
     }
 
     public void downAbsenceAction(ActionEvent event) {//欠席カウントdown
         x = x - 1;
         if(x >= 0){
             absenceLabel.setText( + x + "回");
-            System.out.println("Abesence Count：" + x);
+            System.out.println("AbsenceCount：" + x);
         }else{
             absenceLabel.setText("0回");
-            System.out.println("Abesence Count：0");
+            System.out.println("AbsenceCount：0");
         }   
     }
 
@@ -195,14 +231,7 @@ public class KamokuController implements Initializable {
 
     }
     
-    public static void initialize(String term) {
-        System.out.println("Kamoku Start");
-        semester = term;
-        Jikanwari.kamokuStart();
-    }
-
-    public void file(String fileMei,int k,
-                    String kamokugun,String kamoku,int x,String teacher,String classroom,String memo){//ファイルを読み込み
+    public void file(String fileMei,int k,String kamokugun,String kamoku,int x,String teacher,String classroom,String memo){
         if(fileMei != null){
             try {
                 File file  = new File(fileMei +".csv");
@@ -218,7 +247,7 @@ public class KamokuController implements Initializable {
         }
     }
 
-    public void fileYomikomi(Scanner sc){//コンボボックスに表示
+    public void fileYomikomi(Scanner sc){//ファイルを読み込みコンボボックスに表示
         String str;
         subjectChoice.getItems().add("");
 

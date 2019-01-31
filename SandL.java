@@ -35,10 +35,24 @@ public class SandL{
 			FileWriter fw = new FileWriter(filename);
 			PrintWriter pw = new PrintWriter(new BufferedWriter(fw));
 
-			for(int i=0;i<data.length;i++){
-				for(int j=0;j<data[i].length;j++){
+			for(int i=0;i<5;i++){
+				for(int j=0;j<5;j++){
 					pw.println(data[i][j]);;
 				}
+			}
+			pw.close();
+		}catch(IOException e){
+			System.err.print(e);
+		}
+	}
+
+	public void save2File(){
+		try{
+			FileWriter fw = new FileWriter(filename);
+			PrintWriter pw = new PrintWriter(new BufferedWriter(fw));
+
+			for(int j=0;j<5;j++){
+				pw.println(data[6][j]);;
 			}
 			pw.close();
 		}catch(IOException e){

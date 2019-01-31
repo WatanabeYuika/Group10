@@ -99,10 +99,8 @@ public class Jikanwari extends Application {
             sal4Fall.loadFile();
         }
     }
-    
-    
 
-    public static void save(String str,String semester){//似たようにする
+    public static void save(String str,String semester){
         if(semester.equals("１年前期")){
             sal1Spring.data[ckoma][cyoubi]=str;
             sal1Spring.saveFile();
@@ -130,23 +128,31 @@ public class Jikanwari extends Application {
         }
     }
 
-    public static void saving(String semester){//似たようにする
+    public static void saving(int j, String str, String semester){//似たようにする
         if(semester.equals("１年前期")){
-            sal1Spring.saveFile();
+            sal1Spring.data[6][j]=str;
+            sal1Spring.save2File();
         }else if(semester.equals("１年後期")){
-            sal1Fall.saveFile();
+            sal1Fall.data[6][j]=str;
+            sal1Fall.save2File();
         }else if(semester.equals("２年前期")){
-            sal2Spring.saveFile();  
+            sal2Spring.data[6][j]=str;
+            sal2Spring.save2File();  
         }else if(semester.equals("２年後期")){
-            sal2Fall.saveFile();
+            sal2Fall.data[6][j]=str;
+            sal2Fall.save2File();
         }else if(semester.equals("３年前期")){
-            sal3Spring.saveFile();  
+            sal3Spring.data[6][j]=str;
+            sal3Spring.save2File();  
         }else if(semester.equals("３年後期")){
-            sal3Fall.saveFile();
+            sal3Fall.data[6][j]=str;
+            sal3Fall.save2File();
         }else if(semester.equals("４年前期")){
-            sal4Spring.saveFile();  
+            sal4Spring.data[6][j]=str;
+            sal4Spring.save2File();  
         }else if(semester.equals("４年後期")){
-            sal4Fall.saveFile();
+            sal4Fall.data[6][j]=str;
+            sal4Fall.save2File();
         }
     }
 
