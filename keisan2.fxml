@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="297.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KeisanController">
+   <children>
+      <Button layoutY="1.0" mnemonicParsing="false" onAction="#backAction" text="←" />
+      <Label layoutX="72.0" layoutY="27.0" prefHeight="42.0" prefWidth="142.0" text="単位取得状況">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="83.0" prefHeight="42.0" prefWidth="125.0" text="卒業に必要な単位数" />
+      <Label fx:id="nowLabel" layoutX="235.0" layoutY="128.0" prefHeight="42.0" prefWidth="125.0" />
+      <Label layoutX="72.0" layoutY="128.0" prefHeight="42.0" prefWidth="125.0" text="現在の単位数" />
+      <Label layoutX="72.0" layoutY="170.0" prefHeight="42.0" prefWidth="125.0" text="残りの単位数" />
+      <Label fx:id="leftLabel" layoutX="235.0" layoutY="170.0" prefHeight="42.0" prefWidth="125.0" />
+      <TextField fx:id="needTextField" layoutX="235.0" layoutY="91.0" prefHeight="26.0" prefWidth="84.0" />
+   </children>
+</Pane>

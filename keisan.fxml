@@ -2,23 +2,70 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="297.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KeisanController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KeisanController">
    <children>
-      <Button layoutY="1.0" mnemonicParsing="false" onAction="#backAction" text="←" />
-      <Label layoutX="72.0" layoutY="27.0" prefHeight="42.0" prefWidth="142.0" text="単位取得状況">
+      <Button layoutY="1.0" mnemonicParsing="false" onAction="#backAction" prefHeight="32.0" prefWidth="47.0" text="←" />
+      <Label layoutX="39.0" layoutY="60.0" prefHeight="42.0" prefWidth="142.0" text="単位取得状況">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="72.0" layoutY="83.0" prefHeight="42.0" prefWidth="125.0" text="卒業に必要な単位数" />
-      <Label fx:id="nowLabel" layoutX="235.0" layoutY="128.0" prefHeight="42.0" prefWidth="125.0" />
-      <Label layoutX="72.0" layoutY="128.0" prefHeight="42.0" prefWidth="125.0" text="現在の単位数" />
-      <Label layoutX="72.0" layoutY="170.0" prefHeight="42.0" prefWidth="125.0" text="残りの単位数" />
-      <Label fx:id="leftLabel" layoutX="235.0" layoutY="170.0" prefHeight="42.0" prefWidth="125.0" />
-      <TextField fx:id="needTextField" layoutX="235.0" layoutY="91.0" prefHeight="26.0" prefWidth="84.0" />
+      <Label layoutX="79.0" layoutY="151.0" prefHeight="42.0" prefWidth="125.0" text="卒業に必要な単位数" />
+      <Label layoutX="89.0" layoutY="211.0" prefHeight="42.0" prefWidth="125.0" text="現在の単位数" />
+      <Label layoutX="89.0" layoutY="265.0" prefHeight="42.0" prefWidth="125.0" text="残りの単位数" />
+      <Label layoutX="289.0" layoutY="84.0" prefHeight="42.0" prefWidth="63.0" text="共通科目" />
+      <Label layoutX="421.0" layoutY="84.0" prefHeight="42.0" prefWidth="63.0" text="専門科目" />
+      <GridPane layoutX="204.0" layoutY="125.0" prefHeight="192.0" prefWidth="321.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="64.33331298828125" minHeight="8.33331298828125" prefHeight="23.666656494140625" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="53.333343505859375" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="64.66665649414062" minHeight="10.0" prefHeight="64.66665649414062" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="63.333343505859375" minHeight="10.0" prefHeight="55.333343505859375" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="必修" textAlignment="CENTER" wrappingWidth="43.4700927734375" GridPane.columnIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="選択必修" textAlignment="CENTER" wrappingWidth="34.803466796875" GridPane.columnIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="選択必修" textAlignment="CENTER" wrappingWidth="30.13671875" GridPane.columnIndex="5" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="選択" textAlignment="CENTER" wrappingWidth="50.803466796875" GridPane.columnIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="選択" textAlignment="CENTER" wrappingWidth="50.803466796875" GridPane.columnIndex="6" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="124" textAlignment="CENTER" wrappingWidth="44.8033447265625" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="必修" textAlignment="CENTER" wrappingWidth="43.4700927734375" GridPane.columnIndex="1" />
+            <Label fx:id="khissyu1" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="khissyu2" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="khissyu3" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="ksentakuhissyu1" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="ksentakuhissyu2" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="ksentakuhissyu3" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="ksentaku1" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="ksentaku2" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="ksentaku3" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label fx:id="shissyu1" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label fx:id="shissyu2" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label fx:id="shissyu3" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Label fx:id="ssentakuhissyu1" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Label fx:id="ssentakuhissyu2" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Label fx:id="ssentakuhissyu3" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Label fx:id="ssentaku1" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Label fx:id="sksentaku2" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Label fx:id="ssentaku3" prefHeight="24.0" prefWidth="45.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Label prefHeight="42.0" prefWidth="63.0" text="合計" />
+         </children>
+      </GridPane>
    </children>
 </Pane>
