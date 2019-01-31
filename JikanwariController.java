@@ -121,7 +121,7 @@ public class JikanwariController implements Initializable {
     @FXML private TextArea monText;//getText()でテキストフィールドのように取得できます
     @FXML private TextArea tueText;
     @FXML private TextArea wedText;
-    @FXML private TextArea TurText;
+    @FXML private TextArea turText;
     @FXML private TextArea friText;
 
     public ComboBox<String> getTermComboBox() {
@@ -173,7 +173,13 @@ public class JikanwariController implements Initializable {
 
     public void jikanwariSaveAction(ActionEvent event) {//保存ボタンを押したら
         System.out.println("Save：" + termComboBox.getValue());
-        Jikanwari.saving(termComboBox.getValue());
+        System.out.println(termComboBox.getValue() + " Save:" 
+                            + monText.getText() + "," + tueText.getText() + "," + wedText.getText() + "," + turText.getText() + "," +friText.getText());
+        Jikanwari.saving(0,monText.getText(),termComboBox.getValue());
+        Jikanwari.saving(1,tueText.getText(),termComboBox.getValue());
+        Jikanwari.saving(2,wedText.getText(),termComboBox.getValue());
+        Jikanwari.saving(3,turText.getText(),termComboBox.getValue());
+        Jikanwari.saving(4,friText.getText(),termComboBox.getValue());
     }
 
     public void termComboBoxCoiced( ActionEvent e ){//セメスターを選択したら
