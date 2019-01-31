@@ -28,18 +28,17 @@ public class KeisanController implements Initializable {
         this.leftLabel = leftLabel;
     }
 
-    public void backAction(ActionEvent event) {
-        System.out.println("戻る");
+    public void backAction(ActionEvent event) {//保存もしなきゃ
+        System.out.println("Back");
         JikanwariController.reStart();
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        System.out.println("単位計算の画面に移動");
+        System.out.println("TaniKesan Start");
     }
 
     public static void initialize() {
-        //System.out.println("単位計算の画面に移動");
         Jikanwari.keisanStart();
     }
 }

@@ -128,12 +128,19 @@ public class KamokuController implements Initializable {
     public void subjectChoiced(ActionEvent event) {//科目を選択したら
         ComboBox c = (ComboBox)event.getSource();
         kamoku = (String)c.getValue();//add
-        System.out.println( "選択:"+kamoku);
+        System.out.println( "Select:"+kamoku);
     }
 
     public void backAction(ActionEvent event) {//←のボタンを押すと
-       System.out.println("戻る");
-       JikanwariController.reStart();
+        System.out.println("Back");
+        subjectGroupChoice.getSelectionModel().select(0);
+        subjectChoice.getItems().clear();
+        x = 0;
+        teacherTextFeild.clear();
+        classroomTextFeild.clear();
+        memoTextArea.clear();
+
+        JikanwariController.reStart();
     }
 
     public void saveAction(ActionEvent event) {//OKボタンを押すと
@@ -146,7 +153,7 @@ public class KamokuController implements Initializable {
         file(kamokugun,1,kamokugun,kamoku,x,teacher,classroom,memo);//1ファイル保存
 
         if(kamokugun.equals("")){
-            System.out.println(semester + "保存:"+ kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
+            System.out.println(semester + " Save:"+ kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
             Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, semester);
         }
         
@@ -157,7 +164,9 @@ public class KamokuController implements Initializable {
     public void deleteAction(ActionEvent event) {//削除ボタンを押すと
         System.out.println("delete");
         subjectGroupChoice.getSelectionModel().select(0);
+        //subjectChoice.getSelectionModel().select(0);
         subjectChoice.getItems().clear();
+        x = 0;
         teacherTextFeild.clear();
         classroomTextFeild.clear();
         memoTextArea.clear();
@@ -166,24 +175,24 @@ public class KamokuController implements Initializable {
         String classroom = (String)classroomTextFeild.getText();
         String memo = (String)memoTextArea.getText();
 
-        System.out.println(semester + "保存:"+ kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
+        System.out.println(semester + " Save:"+ kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
         Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, semester);
     }
 
     public void upAbsenceAction(ActionEvent event) {//欠席カウントup
         x = x + 1;
         absenceLabel.setText( + x + "回");
-        System.out.println("欠席回数："+ x);
+        System.out.println("Abesence Count："+ x);
     }
 
     public void downAbsenceAction(ActionEvent event) {//欠席カウントdown
         x = x - 1;
         if(x >= 0){
             absenceLabel.setText( + x + "回");
-            System.out.println("欠席回数：" + x);
+            System.out.println("Abesence Count：" + x);
         }else{
             absenceLabel.setText("0回");
-            System.out.println("欠席回数：0");
+            System.out.println("Abesence Count：0");
         }   
     }
 
@@ -192,7 +201,7 @@ public class KamokuController implements Initializable {
     }
     
     public static void initialize(String term) {
-        System.out.println("KamokuStart");
+        System.out.println("Kamoku Start");
         semester = term;
         Jikanwari.kamokuStart();
     }
@@ -236,7 +245,7 @@ public class KamokuController implements Initializable {
             String kamoku2 = jugyou.toString();
             if(kamoku.equals(kamoku2)){
                 String tani = jugyou.getTani();
-                System.out.println(semester + "保存:"+ 
+                System.out.println(semester + " Save:"+ 
                                    kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
                 Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo,semester);
             }

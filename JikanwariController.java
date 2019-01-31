@@ -150,6 +150,7 @@ public class JikanwariController implements Initializable {
 
         termComboBox.getSelectionModel().select(0);//0ならコンボボックスの1番上の表示(1年前期)
         initialize();
+        System.out.println("Start");
     }
 
     public static void initialize(){
@@ -168,7 +169,6 @@ public class JikanwariController implements Initializable {
                 memoLavel[i].setText(str[6]);//メモ
             }
         }
-        System.out.println("Start");
     }
 
     public void jikanwariSaveAction(ActionEvent event) {//保存ボタンを押したら
@@ -198,7 +198,7 @@ public class JikanwariController implements Initializable {
     public static void reStart() {
         System.out.println("reStart");
         Jikanwari.jikanwariStart();
-        initialize();
+        initialize();//更新
     }
 
 }
