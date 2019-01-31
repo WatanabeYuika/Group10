@@ -107,6 +107,10 @@ public class KamokuController implements Initializable {
         subjectGroupChoice.getItems().add("学部共通科目");
 
         subjectGroupChoice.getSelectionModel().select(0);
+
+        teacherTextFeild.clear();
+        classroomTextFeild.clear();
+        memoTextArea.clear();
     }
 
     public void subjectGroupChoiced(ActionEvent event) {//科目群の選択をしたら
