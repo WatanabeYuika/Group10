@@ -133,13 +133,7 @@ public class KamokuController implements Initializable {
 
     public void backAction(ActionEvent event) {//←のボタンを押すと
         System.out.println("Back");
-        subjectGroupChoice.getSelectionModel().select(0);
-        subjectChoice.getItems().clear();
-        x = 0;
-        teacherTextFeild.clear();
-        classroomTextFeild.clear();
-        memoTextArea.clear();
-
+        reset();
         JikanwariController.reStart();
     }
 
@@ -157,21 +151,14 @@ public class KamokuController implements Initializable {
             Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, semester);
         }
         
-        teacherTextFeild.clear();
-        classroomTextFeild.clear();
-        memoTextArea.clear();
+        reset();
         JikanwariController.initialize();//更新するように変更
         Jikanwari.jikanwariStart();//add
     }
 
     public void deleteAction(ActionEvent event) {//削除ボタンを押すと
         System.out.println("delete");
-        subjectGroupChoice.getSelectionModel().select(0);
-        subjectChoice.getItems().clear();
-        x = 0;
-        teacherTextFeild.clear();
-        classroomTextFeild.clear();
-        memoTextArea.clear();
+        reset();
     }
 
     public void upAbsenceAction(ActionEvent event) {//欠席カウントup
@@ -246,5 +233,14 @@ public class KamokuController implements Initializable {
                 Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo,semester);
             }
         }
+    }
+
+    public void reset(){//初期化
+        subjectGroupChoice.getSelectionModel().select(0);
+        subjectChoice.getItems().clear();
+        x = 0;
+        teacherTextFeild.clear();
+        classroomTextFeild.clear();
+        memoTextArea.clear();
     }
 }
