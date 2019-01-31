@@ -16,16 +16,22 @@ import java.util.Scanner;
 class Jugyou {
     private String kamoku; //授業名
     private static String tani; //各授業の取得可能単位数
+    private static String sh;
     
 
     Jugyou(String str){
-        String[] re = str.split(",", 0);
+        String[] re = str.split(",", 3);
         this.kamoku   = re[0];
         this.tani     = re[1];
+        this.sh = re[2];
     }
 
     public static String getTani(){
         return tani;
+    }
+
+    public static String getSh(){
+        return sh;
     }
     
     public String toString(){
@@ -265,19 +271,6 @@ public class KamokuController implements Initializable {
                 System.err.print(e);
             }
         }
-        /*if(fileMei != null){
-            try {
-                File file  = new File(fileMei +".csv");
-                Scanner sc = new Scanner(file);
-                if(k == 0){
-                    fileYomikomi(sc);
-                }else if(k == 1){
-                    saveKamokuToTani(sc,kamokugun,kamoku,x,teacher,classroom,memo);
-                }
-            } catch (FileNotFoundException e){
-                System.err.print(e);
-            }
-        }*/
     }
 
     public void fileYomikomi(Scanner sc){//コンボボックスに表示
@@ -303,9 +296,10 @@ public class KamokuController implements Initializable {
             String kamoku2 = jugyou.toString();
             if(kamoku.equals(kamoku2)){
                 String tani = jugyou.getTani();
+                String sh = jugyou.getSh();
                 System.out.println(semester + " Save:"+ 
-                                   kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
-                Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo,semester);
+                                   kamokugun+","+kamoku+","+tani+ ","+sh +","+x+","+teacher+","+classroom+","+memo);
+                Jikanwari.save(kamokugun+","+kamoku+","+tani+","+ ","+sh +x+","+teacher+","+classroom+","+memo,semester);
             }
         }
     }
