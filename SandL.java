@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 
 public class SandL{
 	public String filename;
-	public String[][] data;
+	public static String[][] data;
 	public File file;   
 
 	SandL(int koma,int youbi,String filename){
@@ -28,6 +28,11 @@ public class SandL{
 		}catch(IOException e){
 			System.err.print(e);
 		}
+	}
+
+	public static String loadData(int koma, int youbi){
+		String str = data[koma][youbi];
+		return str;
 	}
 
 	public void saveFile(){

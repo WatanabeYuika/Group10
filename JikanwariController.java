@@ -176,7 +176,7 @@ public class JikanwariController implements Initializable {
         Jikanwari.saving(termComboBox.getValue());
     }
 
-    public void termComboBoxCoiced( ActionEvent e ){//セメスターを選択したら
+    public void termComboBoxCoiced(ActionEvent e ){//セメスターを選択したら
         System.out.println( "Select:"+(String)getTermComboBox().getValue() ) ;
         Jikanwari.load(termComboBox.getValue());
     }    
@@ -188,7 +188,7 @@ public class JikanwariController implements Initializable {
         Jikanwari.ckoma = id/5;//add
         Jikanwari.cyoubi = id%5;//add
         System.out.println("Kamoku select");
-        KamokuController.initialize(termComboBox.getValue());
+        KamokuController.initialize(termComboBox.getValue(),Jikanwari.ckoma,Jikanwari.cyoubi);
     }    
 
     public void checkTani(ActionEvent event) {//単位取得確認ボタンを押すと
