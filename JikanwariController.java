@@ -155,7 +155,7 @@ public class JikanwariController implements Initializable {
 
     public static void initialize(){
         for(int i=0;i<25;i++){
-            String[] str=Jikanwari.sal1Spring.data[i/5][i%5].split(",");
+            String[] str = Jikanwari.sal1Spring.data[i/5][i%5].split(",",7);
             if(str.length>1){
                 subjectLavel[i].setText(str[1]);//科目ラベルの配置
             }
@@ -194,7 +194,7 @@ public class JikanwariController implements Initializable {
         Jikanwari.ckoma = id/5;//add
         Jikanwari.cyoubi = id%5;//add
         System.out.println("Kamoku select");
-        KamokuController.initialize(termComboBox.getValue());
+        KamokuController.initialize1(termComboBox.getValue());
     }    
 
     public void checkTani(ActionEvent event) {//単位取得確認ボタンを押すと
