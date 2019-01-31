@@ -25,6 +25,9 @@ public class KeisanController implements Initializable {
     @FXML private Label sum1;
     @FXML private Label sum2;
 
+    public static Label now[];
+    public static Label left[];
+
     public static double s_htani = 0.0; //必修単位      //専門
     public static double s_shtani = 0.0; //選択必修単位
     public static double s_stani = 0.0; //選択単位
@@ -40,45 +43,155 @@ public class KeisanController implements Initializable {
     public static int s_ssum = 20;
     public static int sum = 124;
 
-    public void backAction(ActionEvent event) {//保存もしなきゃ
+    public Label getKhissyu2(){
+        return khissyu2;
+    }
+
+    public Label getKhissyu3(){
+        return khissyu3;
+    }
+
+    public Label getKsentakuhissyu2(){
+        return ksentakuhissyu2;
+    }
+
+    public Label getKsentakuhissyu3(){
+        return ksentakuhissyu3;
+    }
+
+    public Label getKsentaku2(){
+        return ksentaku2;
+    }
+
+    public Label getKsentaku3(){
+        return ksentaku3;
+    }
+
+    public Label getShissyu2(){
+        return shissyu2;
+    }
+
+    public Label getShissyu3(){
+        return shissyu2;
+    }
+
+    public Label getSsentakuhissyu2(){
+        return ssentakuhissyu2;
+    }
+
+    public Label getSsentakuhissyu3(){
+        return ssentakuhissyu2;
+    }
+
+    public Label getSksentaku2(){
+        return sksentaku2;
+    }
+
+    public Label getSsentaku3(){
+        return ssentaku3;
+    }
+
+    public Label getSum1(){
+        return sum1;
+    }
+
+    public Label getSum2(){
+        return sum2;
+    }
+
+    public void setKhissyu2(Label lavel){
+        khissyu2 = lavel;
+    }
+
+    public void setKhissyu3(Label lavel){
+        khissyu3 = lavel;
+    }
+
+    public void setKsentakuhissyu2(Label lavel){
+        ksentakuhissyu2 = lavel;
+    }
+
+    public void setKsentakuhissyu3(Label lavel){
+        ksentakuhissyu3 = lavel;
+    }
+
+    public void setKsentaku2(Label lavel){
+        ksentaku2 = lavel;
+    }
+
+    public void setKsentaku3(Label lavel){
+        ksentaku3 = lavel;
+    }
+
+    public void setShissyu2(Label lavel){
+        shissyu2 = lavel;
+    }
+
+    public void setShissyu3(Label lavel){
+        shissyu2 = lavel;
+    }
+
+    public void setSsentakuhissyu2(Label lavel){
+        ssentakuhissyu2 = lavel;
+    }
+
+    public void setSsentakuhissyu3(Label lavel){
+        ssentakuhissyu2 = lavel;
+    }
+
+    public void setSksentaku2(Label lavel){
+        sksentaku2 = lavel;
+    }
+
+    public void setSsentaku3(Label lavel){
+        ssentaku3 = lavel;
+    }
+
+    public void setSum1(Label lavel){
+        sum1 = lavel;
+    }
+
+    public void setSum2(Label lavel){
+        sum2 = lavel;
+    }
+
+    public void backAction(ActionEvent event) {
         System.out.println("Back");
         JikanwariController.reStart();
     }
 
     public static void getTani(String a, String b, double k){
+        System.out.println("計算:"+a+b+k);
         String q = "教養";
         String w = "専門";
         String e = "必修";
         String r = "選択必修";
         String t = "選択";
     
-        if(a.compareTo(q) == 0){ //教養
-            if(b.compareTo(e) == 0){ //必修
+        if(a.equals(q)){ //教養
+            if(b.equals(e)){ //必修
                 k_htani += k; 
-            }else if(b.compareTo(r) == 0){ //選択必修
+            }else if(b.equals(r)){ //選択必修
                 k_shtani += k;
-            }else if(b.compareTo(t) == 0){ //選択
+            }else if(b.equals(t)){ //選択
                 k_stani += k;
             }
-        }else if(a.compareTo(w) == 0){ //専門
-            if(b.compareTo(e) == 0){ //必修
+        }else if(a.equals(w)){ //専門
+            if(b.equals(e)){ //必修
                 s_htani += k;
-            }else if(b.compareTo(r) == 0){ //選択必修
+            }else if(b.equals(r) ){ //選択必修
                 s_shtani += k;
-            }else if(b.compareTo(t) == 0){ //選択
+            }else if(b.equals(t)){ //選択
                 s_stani += k;
             }
         }
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+        
         int k_h = (int)(k_htani);
         int k_sh = (int)(k_shtani);
         int k_s = (int)(k_stani);
         int s_h = (int)(s_htani);
         int s_sh = (int)(s_shtani);
-        int s_s = (int)(s_stani);
+        int s_s = (int)(s_stani);System.out.println(Integer.toString(k_h));
 
         int s = k_h + k_sh + k_s + s_h + s_sh + s_s;
 
@@ -91,22 +204,32 @@ public class KeisanController implements Initializable {
 
         int lefts = sum - s;
 
-        System.out.println("TaniKesan Start");
-
-        khissyu2.setText(Integer.toString(k_h));
-        khissyu3.setText(Integer.toString(leftk_h));
+        
+        
+        now[0].setText(Integer.toString(k_h));
+        left[0].setText(Integer.toString(leftk_h));
         //ksentakuhissyu2.setText(Integer.toString(k_sh));
         //ksentakuhissyu3.setText(Integer.toString(leftk_sh));
-        ksentaku2.setText(Integer.toString(k_s));
-        ksentaku3.setText(Integer.toString(leftk_s));
-        shissyu2.setText(Integer.toString(s_h));
-        shissyu3.setText(Integer.toString(lefts_h));
-        ssentakuhissyu2.setText(Integer.toString(s_sh));
-        ssentakuhissyu3.setText(Integer.toString(lefts_sh));
-        sksentaku2.setText(Integer.toString(s_s));
-        ssentaku3.setText(Integer.toString(lefts_s));
-        sum1.setText(Integer.toString(s));
-        sum2.setText(Integer.toString(lefts));
+        now[2].setText(Integer.toString(k_s));
+        left[2].setText(Integer.toString(leftk_s));
+        now[3].setText(Integer.toString(s_h));
+        left[3].setText(Integer.toString(lefts_h));
+        now[4].setText(Integer.toString(s_sh));
+        left[4].setText(Integer.toString(lefts_sh));
+        now[5].setText(Integer.toString(s_s));
+        left[5].setText(Integer.toString(lefts_s));
+        now[6].setText(Integer.toString(s));
+        left[6].setText(Integer.toString(lefts));
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        now = new Label[]{khissyu2,ksentakuhissyu2,ksentaku2,shissyu2,ssentakuhissyu2,sksentaku2,sum1};
+        left = new Label[]{khissyu3,ksentakuhissyu3,ksentaku3,shissyu3,ssentakuhissyu3,ssentaku3,sum2};
+
+        System.out.println("TaniKesan Start");
+
+        
     }
 
     public static void initialize() {

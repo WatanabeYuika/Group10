@@ -288,20 +288,97 @@ public class JikanwariController implements Initializable {
 
     public void checkTani(ActionEvent event) {//単位取得確認ボタンを押すと
         //すべてのファイルを読み込んで、trueの単位と選択or必修、科目群の取得
+        System.out.println("Tani check Action");
         int i = 0;
         int j = 0;
 
         String[][][] str = new String[8][25][9]; 
-        try{
-            for( i=0;i<25;i++){
-                String st0[] = Jikanwari.sal1Spring.data[i/5][i%5].split(",",9);
-                String st1[] = Jikanwari.sal1Fall.data[i/5][i%5].split(",",9);
-                String st2[] = Jikanwari.sal2Spring.data[i/5][i%5].split(",",9);
-                String st3[] = Jikanwari.sal2Fall.data[i/5][i%5].split(",",9);
-                String st4[] = Jikanwari.sal3Spring.data[i/5][i%5].split(",",9);
-                String st5[] = Jikanwari.sal3Fall.data[i/5][i%5].split(",",9);
-                String st6[] = Jikanwari.sal4Spring.data[i/5][i%5].split(",",9);
-                String st7[] = Jikanwari.sal4Fall.data[i/5][i%5].split(",",9);
+        
+        for( i=0;i<25;i++){
+            try{  
+                String st[] = Jikanwari.sal1Spring.data[i/5][i%5].split(",");
+                for(j = 0; j < 9; j++){
+                    str[0][i][j] = st[j];
+                }
+            }catch (Exception e){
+                String st[] = null;
+                for(j = 0; j < 9; j++){
+                    str[0][i][j] = null;
+                }
+            }try{
+                String st[] = Jikanwari.sal1Fall.data[i/5][i%5].split(",");
+                for(j = 0; j < 9; j++){
+                    str[1][i][j] = st[j];
+                }
+            }catch (Exception e){
+                String st[] = null;
+                for(j = 0; j < 9; j++){
+                    str[1][i][j] = null;
+                }
+            }try{
+                String st[] = Jikanwari.sal2Spring.data[i/5][i%5].split(",");
+                for(j = 0; j < 9; j++){
+                    str[2][i][j] = st[j];
+                }
+            }catch (Exception e){
+                String st[] = null;
+                for(j = 0; j < 9; j++){
+                    str[2][i][j] = null;
+                }
+            }try{
+                String st[] = Jikanwari.sal2Fall.data[i/5][i%5].split(",");
+                for(j = 0; j < 9; j++){
+                    str[3][i][j] = st[j];
+                }
+            }catch (Exception e){
+                String st[] = null;
+                for(j = 0; j < 9; j++){
+                    str[3][i][j] = null;
+                }
+            }try{
+                String st[] = Jikanwari.sal3Spring.data[i/5][i%5].split(",");
+                for(j = 0; j < 9; j++){
+                    str[4][i][j] = st[j];
+                }
+            }catch (Exception e){
+                String st[] = null;
+                for(j = 0; j < 9; j++){
+                    str[4][i][j] = null;
+                }
+            }try{
+                String st[] = Jikanwari.sal3Fall.data[i/5][i%5].split(",");
+                for(j = 0; j < 9; j++){
+                    str[5][i][j] = st[j];
+                }
+            }catch (Exception e){
+                String st[] = null;
+                for(j = 0; j < 9; j++){
+                    str[5][i][j] = null;
+                }
+            }try{
+                String st[] = Jikanwari.sal4Spring.data[i/5][i%5].split(",");
+                for(j = 0; j < 9; j++){
+                    str[6][i][j] = st[j];
+                }
+            }catch (Exception e){
+                String st[] = null;
+                for(j = 0; j < 9; j++){
+                    str[6][i][j] = null;
+                }
+            }try{
+                String st[] = Jikanwari.sal4Fall.data[i/5][i%5].split(",");
+                for(j = 0; j < 9; j++){
+                    str[7][i][j] = st[j];
+                }
+            }catch (Exception e){
+                String st[] = null;
+                for(j = 0; j < 9; j++){
+                    str[7][i][j] = null;
+                }
+            }
+
+
+              /*  System.out.println(st0[i]);
 
                 for(j = 0; j < 9; j++){
                     str[0][i][j] = st0[j];
@@ -312,40 +389,54 @@ public class JikanwariController implements Initializable {
                     str[5][i][j] = st5[j];
                     str[6][i][j] = st6[j];
                     str[7][i][j] = st7[j];
-                }
+                    
+                }*/
              
-            }
-
-            String kyoutuorSentaku;
-
-            for( i = 0; i < 8; i++){
-                for(j = 0; j < 25; j++){
-                    if(str[i][j][8].equals("true")){
-                        double tani = Double.parseDouble(str[i][j][2]);
-                        if(str[i][j][0].equals("基軸教育科目")
-                        || str[i][j][0].equals("現代教養科目")
-                        || str[i][j][0].equals("留学生科目")
-                        || str[i][j][0].equals("教職等資格科目")
-                        || str[i][j][0].equals("理系科目"))      {
-
-                            kyoutuorSentaku = "教養";
-                            KeisanController.getTani(kyoutuorSentaku,str[i][j][4],tani);
-
-                        }else if(str[i][j][0].equals("学部共通科目")){
-                            kyoutuorSentaku = "専門";
-                            KeisanController.getTani(kyoutuorSentaku,str[i][j][4],tani);
-                        }
-                    }
-                }
-            }
-        }catch (Exception e){
-            KeisanController.getTani("教養","必修",0.0);
+            
+        
+           /* KeisanController.getTani("教養","必修",0.0);
             KeisanController.getTani("教養","選択必修",0.0);
             KeisanController.getTani("教養","選択",0.0);
             KeisanController.getTani("専門","必修",0.0);
             KeisanController.getTani("専門","選択必修",0.0);
-            KeisanController.getTani("専門","選択",0.0);
-        }    
+            KeisanController.getTani("専門","選択",0.0);*/
+        }     
+        System.out.println(str[0][0][2]);
+            String kyoutuorSentaku;
+            for( i = 0; i < 8; i++){
+                for(j = 0; j < 25; j++){
+                    String s8 = str[i][j][8];
+                   // System.out.println(s8);
+                    if(s8!=null){
+                        if(s8.equals("true")){
+                            String s2 = str[i][j][2];
+                            double tani = Double.parseDouble(s2);//Double.parseDouble(str[i])
+                            System.out.println(tani);
+                            String s0 = str[i][j][0];
+                            String s4 = str[i][j][4];
+                            if(s0!=null){
+                                if((s0.equals("基軸教育科目"))|| (s0.equals("現代教養科目"))|| (s0.equals("留学生科目"))|| (s0.equals("教職等資格科目") )|| (s0.equals("理系科目")) )     {
+                                    System.out.println("教養");
+                                    kyoutuorSentaku = "教養";
+                                    KeisanController.getTani(kyoutuorSentaku,s4,tani);
+                                }else if(s0.equals("学部共通科目")){
+                                    System.out.println("専門");
+                                    kyoutuorSentaku = "専門";
+                                    KeisanController.getTani(kyoutuorSentaku,s4,tani);
+                                }
+                            }
+                        }   
+                    }else{
+                        KeisanController.getTani("教養","必修",0.0);
+                        KeisanController.getTani("教養","選択必修",0.0);
+                        KeisanController.getTani("教養","選択",0.0);
+                        KeisanController.getTani("専門","必修",0.0);
+                        KeisanController.getTani("専門","選択必修",0.0);
+                        KeisanController.getTani("専門","選択",0.0);
+                    }
+                }
+            }
+          
 
         KeisanController.initialize();
     } 
