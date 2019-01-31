@@ -102,7 +102,7 @@ public class Jikanwari extends Application {
 
     public static void save(String str,String semester){
         
-        if(semester.equals("1年前期")){System.out.print("saveメソッド");
+        if(semester.equals("1年前期")){
             sal1Spring.data[ckoma][cyoubi]=str;
             sal1Spring.saveFile();
         }else if(semester.equals("1年後期")){
@@ -131,29 +131,29 @@ public class Jikanwari extends Application {
 
     public static void saving(int j, String str, String semester){//似たようにする
         if(semester.equals("1年前期")){
-            sal1Spring.data[6][j]=str;
-            sal1Spring.save2File();
+            sal1Spring.data[5][j]=str;
+            sal1Spring.saveFile();
         }else if(semester.equals("1年後期")){
-            sal1Fall.data[6][j]=str;
-            sal1Fall.save2File();
+            sal1Fall.data[5][j]=str;
+            sal1Fall.saveFile();
         }else if(semester.equals("2年前期")){
-            sal2Spring.data[6][j]=str;
-            sal2Spring.save2File();  
+            sal2Spring.data[5][j]=str;
+            sal2Spring.saveFile();  
         }else if(semester.equals("2年後期")){
-            sal2Fall.data[6][j]=str;
-            sal2Fall.save2File();
+            sal2Fall.data[5][j]=str;
+            sal2Fall.saveFile();
         }else if(semester.equals("3年前期")){
-            sal3Spring.data[6][j]=str;
-            sal3Spring.save2File();  
+            sal3Spring.data[5][j]=str;
+            sal3Spring.saveFile();  
         }else if(semester.equals("3年後期")){
-            sal3Fall.data[6][j]=str;
-            sal3Fall.save2File();
+            sal3Fall.data[5][j]=str;
+            sal3Fall.saveFile();
         }else if(semester.equals("4年前期")){
-            sal4Spring.data[6][j]=str;
-            sal4Spring.save2File();  
+            sal4Spring.data[5][j]=str;
+            sal4Spring.saveFile();  
         }else if(semester.equals("4年後期")){
-            sal4Fall.data[6][j]=str;
-            sal4Fall.save2File();
+            sal4Fall.data[5][j]=str;
+            sal4Fall.saveFile();
         }
     }
 
