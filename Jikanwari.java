@@ -13,7 +13,7 @@ public class Jikanwari extends Application {
     private static Scene myScene;
     private static Scene otherScene;
     private static Scene keisanScene;
-    public static int koma = 5;//add
+    public static int koma = 6;//add
     public static int youbi = 5;//add
     public static String spring1stFile = "Spring1st.csv";
     public static String fall1stFile = "Fall1st.csv";
@@ -64,11 +64,6 @@ public class Jikanwari extends Application {
     public static Scene getKeisanScene(){
         return keisanScene;
     }
-
-    /*public static void jikanwariReStart(){
-        getStage().setScene(getMyScene());
-        getStage().show();
-    }*/
 
     public static void jikanwariStart(){
         getStage().setScene(getMyScene());
