@@ -16,16 +16,22 @@ import java.util.Scanner;
 class Jugyou {
     private String kamoku; //授業名
     private static String tani; //各授業の取得可能単位数
+    private static String sh;
     
 
     Jugyou(String str){
-        String[] re = str.split(",", 0);
+        String[] re = str.split(",", 3);
         this.kamoku   = re[0];
         this.tani     = re[1];
+        this.sh = re[2];
     }
 
     public static String getTani(){
         return tani;
+    }
+
+    public static String getSh(){
+        return sh;
     }
     
     public String toString(){
@@ -38,7 +44,7 @@ public class KamokuController implements Initializable {
     @FXML private TextField classroomTextFeild;
     @FXML private TextField teacherTextFeild;
     @FXML private TextArea memoTextArea;
-    private CheckBox taniCheck;
+    @FXML private CheckBox taniCheck;
     public String kamokugun = null;
     public String kamoku = null;
     public String tani = null;// 単位の保存も
@@ -96,6 +102,14 @@ public class KamokuController implements Initializable {
         this.memoTextArea = memoTextArea;
     }
 
+    public CheckBox getTaniCheck(){
+        return taniCheck;
+    }
+
+    public void setTaniCheck(CheckBox taniCheck){
+        this.taniCheck= taniCheck;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         subjectGroupChoice.getItems().add("");
@@ -149,14 +163,14 @@ public class KamokuController implements Initializable {
         String teacher = (String)teacherTextFeild.getText();
         String classroom = (String)classroomTextFeild.getText();
         String memo = (String)memoTextArea.getText();
-        
-        file(kamokugun,1,kamokugun,kamoku,x,teacher,classroom,memo);//1ファイル保存
 
         if(kamokugun.equals("")){
-            System.out.println(semester + " Save:"+ kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
-            Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, semester);
+            System.out.println(semester + " Save:"+ kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo+","+"false");
+            Jikanwari.save(kamokugun+","+""+","+tani+","+x+","+""+","+teacher+","+classroom+","+memo+","+"false", semester);
+        }else{
+            file(kamokugun,1,kamokugun,kamoku,x,teacher,classroom,memo);//1ファイル保存
         }
-        
+
         reset();
         JikanwariController.initialize();//更新するように変更
         Jikanwari.jikanwariStart();//add
@@ -185,7 +199,34 @@ public class KamokuController implements Initializable {
     }
 
     public void getTani(ActionEvent event) {//単位取得のチェックしたら
+    /*    boolean check = taniCheck.isSelected();
 
+        kamokugun = (String)subjectGroupChoice.getValue();
+        kamoku = (String)subjectChoice.getValue();
+
+        String string = checkB(kamokugun,kamoku);
+
+        String[] str = string.split(",",2);
+        int tani = Integer.parseInt(str[1]);
+        String kyoutuorSentaku;
+
+        if(kamokugun.equals("基軸教育科目") || kamokugun.equals("現代教養科目") ||kamokugun.equals("留学生科目")||kamokugun.equals("教職等資格科目")||kamokugun.equals("理系科目")){
+            kyoutuorSentaku = "共通";
+            if(check == true){
+                KeisanController.getTani(kyoutuorSentaku,str[0],tani);
+            }else{
+                int i = 0 - tani;
+                KeisanController.getTani(kyoutuorSentaku,str[0],i);
+            }
+        }else if(kamokugun.equals("学部共通科目")){
+            kyoutuorSentaku = "選択";
+            if(check == true){
+                KeisanController.getTani(kyoutuorSentaku,str[0],tani);
+            }else{
+                int i = 0 - tani;
+                KeisanController.getTani(kyoutuorSentaku,str[0],i);
+            }
+        }*/
     }
     
     
@@ -265,19 +306,6 @@ public class KamokuController implements Initializable {
                 System.err.print(e);
             }
         }
-        /*if(fileMei != null){
-            try {
-                File file  = new File(fileMei +".csv");
-                Scanner sc = new Scanner(file);
-                if(k == 0){
-                    fileYomikomi(sc);
-                }else if(k == 1){
-                    saveKamokuToTani(sc,kamokugun,kamoku,x,teacher,classroom,memo);
-                }
-            } catch (FileNotFoundException e){
-                System.err.print(e);
-            }
-        }*/
     }
 
     public void fileYomikomi(Scanner sc){//コンボボックスに表示
@@ -303,12 +331,133 @@ public class KamokuController implements Initializable {
             String kamoku2 = jugyou.toString();
             if(kamoku.equals(kamoku2)){
                 String tani = jugyou.getTani();
+                String sh = jugyou.getSh();
+                boolean check = taniCheck.isSelected();
+                String ch = String.valueOf( check );
                 System.out.println(semester + " Save:"+ 
-                                   kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
-                Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo,semester);
+                                   kamokugun+","+kamoku+","+tani+","+ x +","+ sh +","+teacher+","+classroom+","+memo+","+ch);
+                Jikanwari.save(    kamokugun+","+kamoku+","+tani+","+ x +","+ sh +","+teacher+","+classroom+","+memo+","+ch,semester);
+                //                      0     ,     1    ,   2    ,   3   ,    4   ,     5     ,      6      ,   7   ,   8
             }
         }
     }
+
+    /*public String checkB(String kamokugun,String kamoku){
+        String str;
+        String tani;
+        String sh;
+
+        if(kamokugun.equals("基軸教育科目")){
+            try {
+                File file  = new File("基軸教育科目.csv");
+                Scanner sc = new Scanner(file);
+                while(sc.hasNextLine()){
+                    str = sc.nextLine();               
+                    String[] re = str.split(",", 0);
+                    Jugyou jugyou = new Jugyou(str);
+                    String kamoku2 = jugyou.toString();
+                    if(kamoku.equals(kamoku2)){
+                        tani = jugyou.getTani();
+                        sh = jugyou.getSh();
+                        return sh + "," + tani ; 
+                    }
+                }
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("現代教養科目")){
+            try {
+                File file  = new File("現代教養科目.csv");
+                Scanner sc = new Scanner(file);
+                while(sc.hasNextLine()){
+                    str = sc.nextLine();               
+                    String[] re = str.split(",", 0);
+                    Jugyou jugyou = new Jugyou(str);
+                    String kamoku2 = jugyou.toString();
+                    if(kamoku.equals(kamoku2)){
+                        tani = jugyou.getTani();
+                        sh = jugyou.getSh();
+                        return sh + "," + tani ; 
+                    }
+                }
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("留学生科目")){
+            try {
+                File file  = new File("留学生科目.csv");
+                Scanner sc = new Scanner(file);
+                while(sc.hasNextLine()){
+                    str = sc.nextLine();               
+                    String[] re = str.split(",", 0);
+                    Jugyou jugyou = new Jugyou(str);
+                    String kamoku2 = jugyou.toString();
+                    if(kamoku.equals(kamoku2)){
+                        tani = jugyou.getTani();
+                        sh = jugyou.getSh();
+                        return sh + "," + tani ; 
+                    }
+                }
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("教職等資格科目")){
+            try {
+                File file  = new File("教職等資格科目.csv");
+                Scanner sc = new Scanner(file);
+                while(sc.hasNextLine()){
+                    str = sc.nextLine();               
+                    String[] re = str.split(",", 0);
+                    Jugyou jugyou = new Jugyou(str);
+                    String kamoku2 = jugyou.toString();
+                    if(kamoku.equals(kamoku2)){
+                        tani = jugyou.getTani();
+                        sh = jugyou.getSh();
+                        return sh + "," + tani ; 
+                    }
+                }
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("理系科目")){
+            try {
+                File file  = new File("理系科目.csv");
+                Scanner sc = new Scanner(file);
+                while(sc.hasNextLine()){
+                    str = sc.nextLine();               
+                    String[] re = str.split(",", 0);
+                    Jugyou jugyou = new Jugyou(str);
+                    String kamoku2 = jugyou.toString();
+                    if(kamoku.equals(kamoku2)){
+                        tani = jugyou.getTani();
+                        sh = jugyou.getSh();
+                        return sh + "," + tani ; 
+                    }
+                }
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("学部共通科目")){
+            try {
+                File file  = new File("学部共通科目.csv");
+                Scanner sc = new Scanner(file);
+                while(sc.hasNextLine()){
+                    str = sc.nextLine();               
+                    String[] re = str.split(",", 0);
+                    Jugyou jugyou = new Jugyou(str);
+                    String kamoku2 = jugyou.toString();
+                    if(kamoku.equals(kamoku2)){
+                        tani = jugyou.getTani();
+                        sh = jugyou.getSh();
+                        return sh + "," + tani ; 
+                    }
+                }
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }    
+        return null;    
+    }*/
 
     public void reset(){//初期化
         subjectGroupChoice.getSelectionModel().select(0);
@@ -317,5 +466,8 @@ public class KamokuController implements Initializable {
         teacherTextFeild.clear();
         classroomTextFeild.clear();
         memoTextArea.clear();
+        taniCheck.setSelected(false);
     }
 }
+
+//String str1 = String.valueOf( boo1 )/boolean boo1 = Boolean.valueOf( str1 );

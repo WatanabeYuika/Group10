@@ -16,6 +16,7 @@ public class JikanwariController implements Initializable {
     private static Label teacherLavel[];
     private static Label classRoomLavel[];
     private static Label memoLavel[];
+    public static String gakki;
 
     @FXML private Label mon1Subject;
     @FXML private Label mon1Teacher;
@@ -118,7 +119,7 @@ public class JikanwariController implements Initializable {
     @FXML private Label fri5ClassRoom;
     @FXML private Label fri5Memo;
 
-    @FXML private TextArea monText;//getText()でテキストフィールドのように取得できます
+    @FXML private TextArea monText;
     @FXML private TextArea tueText;
     @FXML private TextArea wedText;
     @FXML private TextArea turText;
@@ -139,7 +140,7 @@ public class JikanwariController implements Initializable {
         classRoomLavel = new Label[]{mon1ClassRoom,tue1ClassRoom,wed1ClassRoom,tur1ClassRoom,fri1ClassRoom,mon2ClassRoom,tue2ClassRoom,wed2ClassRoom,tur2ClassRoom,fri2ClassRoom,mon3ClassRoom,tue3ClassRoom,wed3ClassRoom,tur3ClassRoom,fri3ClassRoom,mon4ClassRoom,tue4ClassRoom,wed4ClassRoom,tur4ClassRoom,fri4ClassRoom,mon5ClassRoom,tue5ClassRoom,wed5ClassRoom,tur5ClassRoom,fri5ClassRoom};
         memoLavel = new Label[]{mon1Memo,tue1Memo,wed1Memo,tur1Memo,fri1Memo,mon2Memo,tue2Memo,wed2Memo,tur2Memo,fri2Memo,mon3Memo,tue3Memo,wed3Memo,tur3Memo,fri3Memo,mon4Memo,tue4Memo,wed4Memo,tur4Memo,fri4Memo,mon5Memo,tue5Memo,wed5Memo,tur5Memo,fri5Memo};
 
-        termComboBox.getItems().add("1年前期");//コンボボックスリストstatic問題
+        termComboBox.getItems().add("1年前期");//コンボボックスリスト
         termComboBox.getItems().add("1年後期");
         termComboBox.getItems().add("2年前期");
         termComboBox.getItems().add("2年後期");
@@ -153,23 +154,108 @@ public class JikanwariController implements Initializable {
         System.out.println("Start");
     }
 
-    public static void initialize(){
+    /*public static void initialize(){
         for(int i=0;i<25;i++){
-            String[] str = Jikanwari.sal1Spring.data[i/5][i%5].split(",",7);
+            String[] str = Jikanwari.sal1Spring.data[i/5][i%5].split(",",9);
             if(str.length>1){
                 subjectLavel[i].setText(str[1]);//科目ラベルの配置
             }
             if(str.length>4){
-                teacherLavel[i].setText(str[4]);//担任名表示するよう変更
+                teacherLavel[i].setText(str[5]);//担任名表示するよう変更
             }
             if(str.length>5){
-                classRoomLavel[i].setText(str[5]);//教室名
+                classRoomLavel[i].setText(str[6]);//教室名
             }
             if(str.length>6){
-                memoLavel[i].setText(str[6]);//メモ
+                memoLavel[i].setText(str[7]);//メモ
+            }
+        }
+    }*/
+
+     public static void initialize(){
+        for(int i=0;i<25;i++){
+            String[] str;
+            if(gakki=="1年前期"){
+                String[] str1 = Jikanwari.sal1Spring.data[i/5][i%5].split(",");
+                str=new String[str1.length];
+                for(int j=0;j<str1.length;j++){
+                    str[j]=str1[j];
+                }
+            }else if(gakki=="1年後期"){
+                String[] str1 = Jikanwari.sal1Fall.data[i/5][i%5].split(",");
+                str=new String[str1.length];
+                for(int j=0;j<str1.length;j++){
+                    str[j]=str1[j];
+                }
+            }else if(gakki=="2年前期"){
+                String[] str1 = Jikanwari.sal2Spring.data[i/5][i%5].split(",");
+                str=new String[str1.length];
+                for(int j=0;j<str1.length;j++){
+                    str[j]=str1[j];
+                }
+            }else if(gakki=="2年後期"){
+                String[] str1 = Jikanwari.sal2Fall.data[i/5][i%5].split(",");
+                str=new String[str1.length];
+                for(int j=0;j<str1.length;j++){
+                    str[j]=str1[j];
+                }
+            }else if(gakki=="3年前期"){
+                String[] str1 = Jikanwari.sal3Spring.data[i/5][i%5].split(",");
+                str=new String[str1.length];
+                for(int j=0;j<str1.length;j++){
+                    str[j]=str1[j];
+                }
+            }else if(gakki=="3年後期"){
+                String[] str1 = Jikanwari.sal3Fall.data[i/5][i%5].split(",");
+                str=new String[str1.length];
+                for(int j=0;j<str1.length;j++){
+                    str[j]=str1[j];
+                }
+            }else if(gakki=="4年前期"){
+                String[] str1 = Jikanwari.sal4Spring.data[i/5][i%5].split(",");
+                str=new String[str1.length];
+                for(int j=0;j<str1.length;j++){
+                    str[j]=str1[j];
+                }
+            }else if(gakki=="4年後期"){
+                String[] str1 = Jikanwari.sal4Fall.data[i/5][i%5].split(",");
+                str=new String[str1.length];
+                for(int j=0;j<str1.length;j++){
+                    str[j]=str1[j];
+                }
+            }else{
+                String[] str1=Jikanwari.sal1Spring.data[i/5][i%5].split(",");
+                str=new String[str1.length];
+                for(int j=0;j<str1.length;j++){
+                    str[j]=str1[j];
+                }
+            }
+	    
+            if(str.length>1){
+                subjectLavel[i].setText(str[1]);//科目ラベルの配置
+            }else{
+                subjectLavel[i].setText(" ");
+	    }
+            if(str.length>5){
+                teacherLavel[i].setText(str[5]);//担任名表示するよう変更
+            }else{
+                teacherLavel[i].setText(" ");
+            }
+
+            if(str.length>6){
+                classRoomLavel[i].setText(str[6]);//教室名
+            }else{
+                classRoomLavel[i].setText(" ");
+            }
+
+            if(str.length>7){
+                memoLavel[i].setText(str[7]);//メモ
+            }else{
+                memoLavel[i].setText(" ");
             }
         }
     }
+
 
     public void jikanwariSaveAction(ActionEvent event) {//保存ボタンを押したら
         System.out.println("Save：" + termComboBox.getValue());
@@ -183,8 +269,11 @@ public class JikanwariController implements Initializable {
     }
 
     public void termComboBoxCoiced( ActionEvent e ){//セメスターを選択したら
-        System.out.println( "Select:"+(String)getTermComboBox().getValue() ) ;
+        gakki=(String)getTermComboBox().getValue();
+        System.out.println( "Select:"+gakki ) ;
+        //System.out.println( "Select:"+(String)getTermComboBox().getValue() ) ;
         Jikanwari.load(termComboBox.getValue());
+        initialize();
     }    
 
     public void kamokuAction(ActionEvent event) {//時間割コマを押すと
@@ -198,6 +287,66 @@ public class JikanwariController implements Initializable {
     }    
 
     public void checkTani(ActionEvent event) {//単位取得確認ボタンを押すと
+        //すべてのファイルを読み込んで、trueの単位と選択or必修、科目群の取得
+        int i = 0;
+        int j = 0;
+
+        String[][][] str = new String[8][25][9]; 
+        try{
+            for( i=0;i<25;i++){
+                String st0[] = Jikanwari.sal1Spring.data[i/5][i%5].split(",",9);
+                String st1[] = Jikanwari.sal1Fall.data[i/5][i%5].split(",",9);
+                String st2[] = Jikanwari.sal2Spring.data[i/5][i%5].split(",",9);
+                String st3[] = Jikanwari.sal2Fall.data[i/5][i%5].split(",",9);
+                String st4[] = Jikanwari.sal3Spring.data[i/5][i%5].split(",",9);
+                String st5[] = Jikanwari.sal3Fall.data[i/5][i%5].split(",",9);
+                String st6[] = Jikanwari.sal4Spring.data[i/5][i%5].split(",",9);
+                String st7[] = Jikanwari.sal4Fall.data[i/5][i%5].split(",",9);
+
+                for(j = 0; j < 9; j++){
+                    str[0][i][j] = st0[j];
+                    str[1][i][j] = st1[j];
+                    str[2][i][j] = st2[j];
+                    str[3][i][j] = st3[j];
+                    str[4][i][j] = st4[j];
+                    str[5][i][j] = st5[j];
+                    str[6][i][j] = st6[j];
+                    str[7][i][j] = st7[j];
+                }
+             
+            }
+
+            String kyoutuorSentaku;
+
+            for( i = 0; i < 8; i++){
+                for(j = 0; j < 25; j++){
+                    if(str[i][j][8].equals("true")){
+                        double tani = Double.parseDouble(str[i][j][2]);
+                        if(str[i][j][0].equals("基軸教育科目")
+                        || str[i][j][0].equals("現代教養科目")
+                        || str[i][j][0].equals("留学生科目")
+                        || str[i][j][0].equals("教職等資格科目")
+                        || str[i][j][0].equals("理系科目"))      {
+
+                            kyoutuorSentaku = "教養";
+                            KeisanController.getTani(kyoutuorSentaku,str[i][j][4],tani);
+
+                        }else if(str[i][j][0].equals("学部共通科目")){
+                            kyoutuorSentaku = "専門";
+                            KeisanController.getTani(kyoutuorSentaku,str[i][j][4],tani);
+                        }
+                    }
+                }
+            }
+        }catch (Exception e){
+            KeisanController.getTani("教養","必修",0.0);
+            KeisanController.getTani("教養","選択必修",0.0);
+            KeisanController.getTani("教養","選択",0.0);
+            KeisanController.getTani("専門","必修",0.0);
+            KeisanController.getTani("専門","選択必修",0.0);
+            KeisanController.getTani("専門","選択",0.0);
+        }    
+
         KeisanController.initialize();
     } 
 
