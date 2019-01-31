@@ -103,11 +103,11 @@
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="金" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
-                  <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                  <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                  <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-                  <TextArea cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-                  <TextArea cacheShape="false" centerShape="false" prefHeight="55.0" prefWidth="44.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                  <TextArea fx:id="monText" cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextArea fx:id="tueText" cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <TextArea fx:id="wedText" cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <TextArea fx:id="TurText" cacheShape="false" centerShape="false" prefHeight="56.0" prefWidth="50.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                  <TextArea fx:id="friText" cacheShape="false" centerShape="false" prefHeight="55.0" prefWidth="44.0" scaleShape="false" scrollTop="500.0" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
                   <Button fx:id="0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="35.0" mnemonicParsing="false" onAction="#kamokuAction" prefHeight="80.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <graphic>
                         <GridPane>

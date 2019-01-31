@@ -42,7 +42,6 @@ public class KamokuController implements Initializable {
     public String kamokugun = null;
     public String kamoku = null;
     public String tani = null;// 単位の保存も
-    public static String semester = null;
 
     @FXML private Label absenceLabel;
     @FXML private ComboBox<String> subjectGroupChoice;
@@ -115,9 +114,55 @@ public class KamokuController implements Initializable {
 	    kamokugun = (String)c.getValue();
         
         subjectChoice.getItems().clear();
-
-        file(kamokugun,0,null,null,0,null,null,null);//0ファイル読み込み
-        
+        if(c.getValue().equals("基軸教育科目")){
+            try {
+                File file  = new File("基軸教育科目.csv");
+                Scanner sc = new Scanner(file);
+                fileYomikomi(sc);//メソッドにしました
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(c.getValue().equals("現代教養科目")){
+            try {
+                File file  = new File("現代教養科目.csv");
+                Scanner sc = new Scanner(file);
+                fileYomikomi(sc);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(c.getValue().equals("留学生科目")){
+            try {
+                File file  = new File("留学生科目.csv");
+                Scanner sc = new Scanner(file);
+                fileYomikomi(sc);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(c.getValue().equals("教職等資格科目")){
+            try {
+                File file  = new File("教職等資格科目.csv");
+                Scanner sc = new Scanner(file);
+                fileYomikomi(sc);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(c.getValue().equals("理系科目")){
+            try {
+                File file  = new File("理系科目.csv");
+                Scanner sc = new Scanner(file);
+                fileYomikomi(sc);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(c.getValue().equals("学部共通科目")){
+            try {
+                File file  = new File("学部共通科目.csv");
+                Scanner sc = new Scanner(file);
+                fileYomikomi(sc);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }  
+        }
         subjectChoice.getSelectionModel().select(0);
     }
 
@@ -138,20 +183,69 @@ public class KamokuController implements Initializable {
         String teacher = (String)teacherTextFeild.getText();
         String classroom = (String)classroomTextFeild.getText();
         String memo = (String)memoTextArea.getText();
-        
-        file(kamokugun,1,kamokugun,kamoku,x,teacher,classroom,memo);//1ファイル保存
+        String str;
 
-        if(kamokugun.equals("")){
-            System.out.println(semester + "保存:"+ kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
-            Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, semester);
+        if(kamokugun.equals("基軸教育科目")){
+            try {
+                File file  = new File("基軸教育科目.csv");
+                Scanner sc = new Scanner(file);
+                saveKamokuToTani(sc,kamokugun,kamoku,x,teacher,classroom,memo);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("現代教養科目")){
+            try {
+                File file  = new File("現代教養科目.csv");
+                Scanner sc = new Scanner(file);
+                saveKamokuToTani(sc,kamokugun,kamoku,x,teacher,classroom,memo);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("留学生科目")){
+            try {
+                File file  = new File("留学生科目.csv");
+                Scanner sc = new Scanner(file);
+                saveKamokuToTani(sc,kamokugun,kamoku,x,teacher,classroom,memo);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("教職等資格科目")){
+            try {
+                File file  = new File("教職等資格科目.csv");
+                Scanner sc = new Scanner(file);
+                saveKamokuToTani(sc,kamokugun,kamoku,x,teacher,classroom,memo);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("理系科目")){
+            try {
+                File file  = new File("理系科目.csv");
+                Scanner sc = new Scanner(file);
+                saveKamokuToTani(sc,kamokugun,kamoku,x,teacher,classroom,memo);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("学部共通科目")){
+            try {
+                File file  = new File("学部共通科目.csv");
+                Scanner sc = new Scanner(file);
+                saveKamokuToTani(sc,kamokugun,kamoku,x,teacher,classroom,memo);
+            } catch (FileNotFoundException e){
+                System.err.print(e);
+            }
+        }else if(kamokugun.equals("")){
+
+            System.out.println(JikanwariController.getTermComboBox().getValue() +"Save:"
+                                +kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
+            Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, 
+                           JikanwariController.getTermComboBox().getValue());
         }
         
         JikanwariController.initialize();//更新するように変更
         Jikanwari.jikanwariStart();//add
     }
 
-    public void deleteAction(ActionEvent event) {//削除ボタンを押すと
-        System.out.println("delete");
+    public void deleteAction(ActionEvent event) {//削除ボタンを押すと//作成
         subjectGroupChoice.getSelectionModel().select(0);
         subjectChoice.getItems().clear();
         teacherTextFeild.clear();
@@ -162,8 +256,10 @@ public class KamokuController implements Initializable {
         String classroom = (String)classroomTextFeild.getText();
         String memo = (String)memoTextArea.getText();
 
-        System.out.println(semester + "保存:"+ kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
-        Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, semester);
+        System.out.println(JikanwariController.getTermComboBox().getValue() +"Save:"
+                                +kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
+        Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo, 
+                           JikanwariController.getTermComboBox().getValue());
     }
 
     public void upAbsenceAction(ActionEvent event) {//欠席カウントup
@@ -187,26 +283,9 @@ public class KamokuController implements Initializable {
 
     }
     
-    public static void initialize(String term) {
+    public static void initialize() {
         System.out.println("KamokuStart");
-        semester = term;
         Jikanwari.kamokuStart();
-    }
-
-    public void file(String fileMei,int k,String kamokugun,String kamoku,int x,String teacher,String classroom,String memo){
-        if(fileMei != null){
-            try {
-                File file  = new File(fileMei +".csv");
-                Scanner sc = new Scanner(file);
-                if(k == 0){
-                    fileYomikomi(sc);
-                }else if(k == 1){
-                    saveKamokuToTani(sc,kamokugun,kamoku,x,teacher,classroom,memo);
-                }
-            } catch (FileNotFoundException e){
-                System.err.print(e);
-            }
-        }
     }
 
     public void fileYomikomi(Scanner sc){//ファイルを読み込みコンボボックスに表示
@@ -232,9 +311,7 @@ public class KamokuController implements Initializable {
             String kamoku2 = jugyou.toString();
             if(kamoku.equals(kamoku2)){
                 String tani = jugyou.getTani();
-                System.out.println(semester + "保存:"+ 
-                                   kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
-                Jikanwari.save(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo,semester);
+                JikanwariController.forKamokuSave(kamokugun+","+kamoku+","+tani+","+x+","+teacher+","+classroom+","+memo);
             }
         }
     }
