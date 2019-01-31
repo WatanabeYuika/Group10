@@ -88,9 +88,9 @@ public class Jikanwari extends Application {
     public static void load(String semester){//あと条件文とそのファイルを作る
         if(semester.equals("１年前期")){
             sal1Spring.loadFile();
-        }else if(){
+        }//else if(){
 
-        }
+    
         
         sal1Fall.loadFile();
         sal2Spring.loadFile();
@@ -107,9 +107,8 @@ public class Jikanwari extends Application {
         if(semester.equals("１年前期")){
             sal1Spring.data[ckoma][cyoubi]=str;
             sal1Spring.saveFile();
-        }else if(){
+        }//else if(){
             
-        }
         
         
     }
@@ -117,7 +116,7 @@ public class Jikanwari extends Application {
     public static void saving(String semester){//似たようにする
         if(semester.equals("１年前期")){
             sal1Spring.saveFile();
-        }else if()
+        }//else if()
     }
 
     
