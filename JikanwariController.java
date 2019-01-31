@@ -139,7 +139,7 @@ public class JikanwariController implements Initializable {
         classRoomLavel = new Label[]{mon1ClassRoom,tue1ClassRoom,wed1ClassRoom,tur1ClassRoom,fri1ClassRoom,mon2ClassRoom,tue2ClassRoom,wed2ClassRoom,tur2ClassRoom,fri2ClassRoom,mon3ClassRoom,tue3ClassRoom,wed3ClassRoom,tur3ClassRoom,fri3ClassRoom,mon4ClassRoom,tue4ClassRoom,wed4ClassRoom,tur4ClassRoom,fri4ClassRoom,mon5ClassRoom,tue5ClassRoom,wed5ClassRoom,tur5ClassRoom,fri5ClassRoom};
         memoLavel = new Label[]{mon1Memo,tue1Memo,wed1Memo,tur1Memo,fri1Memo,mon2Memo,tue2Memo,wed2Memo,tur2Memo,fri2Memo,mon3Memo,tue3Memo,wed3Memo,tur3Memo,fri3Memo,mon4Memo,tue4Memo,wed4Memo,tur4Memo,fri4Memo,mon5Memo,tue5Memo,wed5Memo,tur5Memo,fri5Memo};
 
-        termComboBox.getItems().add("1年前期");//コンボボックスリスト
+        termComboBox.getItems().add("1年前期");//コンボボックスリストstatic問題
         termComboBox.getItems().add("1年後期");
         termComboBox.getItems().add("2年前期");
         termComboBox.getItems().add("2年後期");
@@ -147,16 +147,14 @@ public class JikanwariController implements Initializable {
         termComboBox.getItems().add("3年後期");
         termComboBox.getItems().add("4年後期");
         termComboBox.getItems().add("4年前期");
-       
-        termComboBox.getSelectionModel().select(-1);//0ならコンボボックスの1番上の表示(1年前期)
 
+        termComboBox.getSelectionModel().select(0);//0ならコンボボックスの1番上の表示(1年前期)
         initialize();
-        
     }
 
     public static void initialize(){
         for(int i=0;i<25;i++){
-            String[] str=Jikanwari.sal.data[i/5][i%5].split(",");
+            String[] str=Jikanwari.sal1Spring.data[i/5][i%5].split(",");
             if(str.length>1){
                 subjectLavel[i].setText(str[1]);//科目ラベルの配置
             }
@@ -174,13 +172,13 @@ public class JikanwariController implements Initializable {
     }
 
     public void jikanwariSaveAction(ActionEvent event) {//保存ボタンを押したら
-        System.out.println("Save：" + getTermComboBox().getValue());
-        Jikanwari.saving(getTermComboBox().getValue());
+        System.out.println("Save：" + termComboBox.getValue());
+        Jikanwari.saving(termComboBox.getValue());
     }
 
     public void termComboBoxCoiced( ActionEvent e ){//セメスターを選択したら
         System.out.println( "Select:"+(String)getTermComboBox().getValue() ) ;
-        Jikanwari.loadFile(getTermComboBox().getValue());
+        Jikanwari.load(termComboBox.getValue());
     }    
 
     public void kamokuAction(ActionEvent event) {//時間割コマを押すと
@@ -190,7 +188,7 @@ public class JikanwariController implements Initializable {
         Jikanwari.ckoma = id/5;//add
         Jikanwari.cyoubi = id%5;//add
         System.out.println("Kamoku select");
-        KamokuController.initialize();
+        KamokuController.initialize(termComboBox.getValue());
     }    
 
     public void checkTani(ActionEvent event) {//単位取得確認ボタンを押すと
