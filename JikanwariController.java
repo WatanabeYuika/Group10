@@ -124,6 +124,7 @@ public class JikanwariController implements Initializable {
     @FXML private TextArea wedText;
     @FXML private TextArea turText;
     @FXML private TextArea friText;
+    private static TextArea[] houkagoText; 
 
     public ComboBox<String> getTermComboBox() {
         return termComboBox;
@@ -139,6 +140,7 @@ public class JikanwariController implements Initializable {
         teacherLavel = new Label[] {mon1Teacher,tue1Teacher,wed1Teacher,tur1Teacher,fri1Teacher,mon2Teacher,tue2Teacher,wed2Teacher,tur2Teacher,fri2Teacher,mon3Teacher,tue3Teacher,wed3Teacher,tur3Teacher,fri3Teacher,mon4Teacher,tue4Teacher,wed4Teacher,tur4Teacher,fri4Teacher,mon5Teacher,tue5Teacher,wed5Teacher,tur5Teacher,fri5Teacher};
         classRoomLavel = new Label[] {mon1ClassRoom,tue1ClassRoom,wed1ClassRoom,tur1ClassRoom,fri1ClassRoom,mon2ClassRoom,tue2ClassRoom,wed2ClassRoom,tur2ClassRoom,fri2ClassRoom,mon3ClassRoom,tue3ClassRoom,wed3ClassRoom,tur3ClassRoom,fri3ClassRoom,mon4ClassRoom,tue4ClassRoom,wed4ClassRoom,tur4ClassRoom,fri4ClassRoom,mon5ClassRoom,tue5ClassRoom,wed5ClassRoom,tur5ClassRoom,fri5ClassRoom};
         memoLavel = new Label[] {mon1Memo,tue1Memo,wed1Memo,tur1Memo,fri1Memo,mon2Memo,tue2Memo,wed2Memo,tur2Memo,fri2Memo,mon3Memo,tue3Memo,wed3Memo,tur3Memo,fri3Memo,mon4Memo,tue4Memo,wed4Memo,tur4Memo,fri4Memo,mon5Memo,tue5Memo,wed5Memo,tur5Memo,fri5Memo};
+        houkagoText = new TextArea[] {monText, tueText, wedText, turText,friText};
 
         termComboBox.getItems().add("1年前期");//コンボボックスリスト
         termComboBox.getItems().add("1年後期");
@@ -146,8 +148,8 @@ public class JikanwariController implements Initializable {
         termComboBox.getItems().add("2年後期");
         termComboBox.getItems().add("3年前期");
         termComboBox.getItems().add("3年後期");
-        termComboBox.getItems().add("4年後期");
         termComboBox.getItems().add("4年前期");
+        termComboBox.getItems().add("4年後期");
 
         termComboBox.getSelectionModel().select(0);//0ならコンボボックスの1番上の表示(1年前期)
         initialize();
@@ -155,38 +157,58 @@ public class JikanwariController implements Initializable {
     }
 
      public static void initialize(){
+        String[] str2 = new String[5];
         for(int i=0;i<25;i++){
             String[] str;
             String[] str1;
-            if(gakki == "1年前期"){//6列目の読み込みも
+            if(gakki == "1年前期"){
                 str1 = Jikanwari.sal1Spring.data[i/5][i%5].split(",");
-                
+                for(int j = 0; j < 5; j++){
+                    str2[j] = Jikanwari.sal1Spring.data[5][j];
+                }
             }else if(gakki == "1年後期"){
                 str1 = Jikanwari.sal1Fall.data[i/5][i%5].split(",");
-
+                for(int j = 0; j < 5; j++){
+                    str2[j] = Jikanwari.sal1Fall.data[5][j];
+                }
             }else if(gakki == "2年前期"){
                 str1 = Jikanwari.sal2Spring.data[i/5][i%5].split(",");
-
+                for(int j = 0; j < 5; j++){
+                    str2[j] = Jikanwari.sal2Spring.data[5][j];
+                }
             }else if(gakki == "2年後期"){
                 str1 = Jikanwari.sal2Fall.data[i/5][i%5].split(",");
-
+                for(int j = 0; j < 5; j++){
+                    str2[j] = Jikanwari.sal2Fall.data[5][j];
+                }
             }else if(gakki == "3年前期"){
                 str1 = Jikanwari.sal3Spring.data[i/5][i%5].split(",");
-
+                for(int j = 0; j < 5; j++){
+                    str2[j] = Jikanwari.sal3Spring.data[5][j];
+                }
             }else if(gakki == "3年後期"){
                 str1 = Jikanwari.sal3Fall.data[i/5][i%5].split(",");
-
+                for(int j = 0; j < 5; j++){
+                    str2[j] = Jikanwari.sal3Fall.data[5][j];
+                }
             }else if(gakki == "4年前期"){
                 str1 = Jikanwari.sal4Spring.data[i/5][i%5].split(",");
-
+                for(int j = 0; j < 5; j++){
+                    str2[j] = Jikanwari.sal4Spring.data[5][j];
+                }
             }else if(gakki == "4年後期"){
                 str1 = Jikanwari.sal4Fall.data[i/5][i%5].split(",");
-
+                for(int j = 0; j < 5; j++){
+                    str2[j] = Jikanwari.sal4Fall.data[5][j];
+                }
             }else{
                 str1 = Jikanwari.sal1Spring.data[i/5][i%5].split(",");
+                for(int j = 0; j < 5; j++){
+                    str2[j] = Jikanwari.sal1Spring.data[5][j];
+                }
             }
 
-            str=new String[str1.length];
+            str = new String[str1.length];
             for(int j=0;j<str1.length;j++){
                 str[j]=str1[j];
             }
@@ -214,6 +236,9 @@ public class JikanwariController implements Initializable {
             }else{
                 memoLavel[i].setText(" ");
             }
+        }
+        for(int i = 0; i < 5; i++){
+            houkagoText[i].setText(str2[i]);
         }
     }
 
@@ -247,7 +272,7 @@ public class JikanwariController implements Initializable {
         Jikanwari.ckoma = id/5;
         Jikanwari.cyoubi = id%5;
         System.out.println("Kamoku select");
-        KamokuController.initialize1(termComboBox.getValue());
+        KamokuController.initialize1(termComboBox.getValue(),id/5,id%5);
     }    
 
     public void checkTani(ActionEvent event) {//単位取得確認ボタンを押すと
@@ -402,5 +427,4 @@ public class JikanwariController implements Initializable {
         Jikanwari.jikanwariStart();
         initialize();//ラベルの更新
     }
-
 }

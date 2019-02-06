@@ -99,7 +99,7 @@ public class Jikanwari extends Application {
             sal4Fall.loadFile();
         }
     }
-
+    
     public static void save(String str,String semester){
         
         if(semester.equals("1年前期")){
@@ -131,11 +131,11 @@ public class Jikanwari extends Application {
 
     public static void saving(int j, String str, String semester){
         if(semester.equals("1年前期")){
-            sal1Spring.data[5][j]=str;
+            sal1Spring.data[5][j ]= str;
             sal1Spring.saveFile();
 
         }else if(semester.equals("1年後期")){
-            sal1Fall.data[5][j]=str;
+            sal1Fall.data[5][j] = str;
             sal1Fall.saveFile();
 
         }else if(semester.equals("2年前期")){
