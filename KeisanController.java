@@ -178,7 +178,7 @@ public class KeisanController implements Initializable {
         String sentakuhissyu = "選択必修";
         String sentaku = "選択";
 
-        if(i == 0 && j == 0){
+        if(i == 0 && j == 0){//単位修得状況のボタンが選択されるたびに初期化されるように修正
             s_htani = 0.0;
             s_shtani = 0.0;
             s_stani = 0.0;
