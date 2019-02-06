@@ -13,8 +13,8 @@ public class Jikanwari extends Application {
     private static Scene myScene;
     private static Scene otherScene;
     private static Scene keisanScene;
-    public static int koma = 6;//add
-    public static int youbi = 5;//add
+    public static int koma = 6;
+    public static int youbi = 5;
     public static String spring1stFile = "Spring1st.csv";
     public static String fall1stFile = "Fall1st.csv";
     public static String spring2ndFile = "Spring2nd.csv";
@@ -23,12 +23,12 @@ public class Jikanwari extends Application {
     public static String fall3rdFile = "Fall3rd.csv";
     public static String spring4thFile = "Spring4th.csv";
     public static String fall4thFile = "Fall4th.csv";
-    public static int ckoma,cyoubi;//add
-    public static SandL sal1Spring,sal1Fall,sal2Spring,sal2Fall,sal3Spring,sal3Fall,sal4Spring,sal4Fall;//add
+    public static int ckoma,cyoubi;
+    public static SandL sal1Spring,sal1Fall,sal2Spring,sal2Fall,sal3Spring,sal3Fall,sal4Spring,sal4Fall;
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        sal1Spring = new SandL(koma,youbi,spring1stFile);//add
+        sal1Spring = new SandL(koma,youbi,spring1stFile);
         sal1Fall = new SandL(koma,youbi,fall1stFile);
         sal2Spring = new SandL(koma,youbi,spring2ndFile);
         sal2Fall = new SandL(koma,youbi,fall2ndFile);
@@ -36,7 +36,7 @@ public class Jikanwari extends Application {
         sal3Fall = new SandL(koma,youbi,fall3rdFile);
         sal4Spring = new SandL(koma,youbi,spring4thFile);
         sal4Fall = new SandL(koma,youbi,fall4thFile);
-        sal1Spring.loadFile();//add
+        sal1Spring.loadFile();
         stage = primaryStage;
         primaryStage.setTitle("JIKANWARI");
         Pane myPane_top = (Pane)FXMLLoader.load(getClass().getResource("Jikanwari.fxml"));   
@@ -80,7 +80,7 @@ public class Jikanwari extends Application {
         getStage().show();
     }
 
-    public static void load(String semester){//あと条件文とそのファイルを作る
+    public static void load(String semester){
         if(semester.equals("1年前期")){
             sal1Spring.loadFile();
         }else if(semester.equals("1年後期")){
@@ -129,28 +129,35 @@ public class Jikanwari extends Application {
         }
     }
 
-    public static void saving(int j, String str, String semester){//似たようにする
+    public static void saving(int j, String str, String semester){
         if(semester.equals("1年前期")){
             sal1Spring.data[5][j]=str;
             sal1Spring.saveFile();
+
         }else if(semester.equals("1年後期")){
             sal1Fall.data[5][j]=str;
             sal1Fall.saveFile();
+
         }else if(semester.equals("2年前期")){
             sal2Spring.data[5][j]=str;
             sal2Spring.saveFile();  
+
         }else if(semester.equals("2年後期")){
             sal2Fall.data[5][j]=str;
             sal2Fall.saveFile();
+
         }else if(semester.equals("3年前期")){
             sal3Spring.data[5][j]=str;
             sal3Spring.saveFile();  
+
         }else if(semester.equals("3年後期")){
             sal3Fall.data[5][j]=str;
             sal3Fall.saveFile();
+
         }else if(semester.equals("4年前期")){
             sal4Spring.data[5][j]=str;
             sal4Spring.saveFile();  
+            
         }else if(semester.equals("4年後期")){
             sal4Fall.data[5][j]=str;
             sal4Fall.saveFile();

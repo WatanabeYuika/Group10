@@ -31,17 +31,17 @@ public class KeisanController implements Initializable {
     public static double s_htani = 0.0; //必修単位      //専門
     public static double s_shtani = 0.0; //選択必修単位
     public static double s_stani = 0.0; //選択単位
-    public static double k_htani = 0.0; //必修単位      //共通
+    public static double k_htani = 0.0; //必修単位      //教養
     public static double k_shtani = 0.0; //選択必修単位
     public static double k_stani = 0.0; //選択単位
 
-    public static int k_hsum = 17;
-    public static int k_shsum = 0;
-    public static int k_ssum = 15;
-    public static int s_hsum = 64;
-    public static int s_shsum = 8;
-    public static int s_ssum = 20;
-    public static int sum = 124;
+    public static final int k_hsum = 17;//情報科学科
+    public static final int k_shsum = 0;
+    public static final int k_ssum = 15;
+    public static final int s_hsum = 64;
+    public static final int s_shsum = 8;
+    public static final int s_ssum = 20;
+    public static final int sum = 124;
 
     public Label getKhissyu2(){
         return khissyu2;
@@ -155,84 +155,93 @@ public class KeisanController implements Initializable {
         sum2 = lavel;
     }
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        now = new Label[] {khissyu2,ksentakuhissyu2,ksentaku2,shissyu2,ssentakuhissyu2,sksentaku2,sum1};
+        left = new Label[] {khissyu3,ksentakuhissyu3,ksentaku3,shissyu3,ssentakuhissyu3,ssentaku3,sum2};
+    }
+
+    public static void initialize() {
+        Jikanwari.keisanStart();
+        System.out.println("TaniKesan Start");
+    }
+
+
     public void backAction(ActionEvent event) {
         System.out.println("Back");
         JikanwariController.reStart();
     }
 
-    public static void getTani(String a, String b, double k){
-        System.out.println("計算:"+a+b+k);
-        String q = "教養";
-        String w = "専門";
-        String e = "必修";
-        String r = "選択必修";
-        String t = "選択";
+    public static void getTani(String kyouoOrSenmon, String hissyuOrSentaku, double tani, int i, int j){
+        String hissyu = "必修";
+        String sentakuhissyu = "選択必修";
+        String sentaku = "選択";
+
+        if(i == 0 && j == 0){
+            s_htani = 0.0;
+            s_shtani = 0.0;
+            s_stani = 0.0;
+            k_htani = 0.0;
+            k_shtani = 0.0;
+            k_stani = 0.0;
+        }
     
-        if(a.equals(q)){ //教養
-            if(b.equals(e)){ //必修
-                k_htani += k; 
-            }else if(b.equals(r)){ //選択必修
-                k_shtani += k;
-            }else if(b.equals(t)){ //選択
-                k_stani += k;
+        if(kyouoOrSenmon.equals("教養")){ //教養
+
+            if(hissyuOrSentaku.equals(hissyu)){ //必修
+                k_htani += tani; 
+            }else if(hissyuOrSentaku.equals(sentakuhissyu)){ //選択必修
+                k_shtani += tani;
+            }else if(hissyuOrSentaku.equals(sentaku)){ //選択
+                k_stani += tani;
             }
-        }else if(a.equals(w)){ //専門
-            if(b.equals(e)){ //必修
-                s_htani += k;
-            }else if(b.equals(r) ){ //選択必修
-                s_shtani += k;
-            }else if(b.equals(t)){ //選択
-                s_stani += k;
+
+        }else if(kyouoOrSenmon.equals("専門")){ //専門
+
+            if(hissyuOrSentaku.equals(hissyu)){ //必修
+                s_htani += tani;
+            }else if(hissyuOrSentaku.equals(sentakuhissyu) ){ //選択必修
+                s_shtani += tani;
+            }else if(hissyuOrSentaku.equals(sentaku)){ //選択
+                s_stani += tani;
             }
         }
-        
-        int k_h = (int)(k_htani);
-        int k_sh = (int)(k_shtani);
-        int k_s = (int)(k_stani);
-        int s_h = (int)(s_htani);
-        int s_sh = (int)(s_shtani);
-        int s_s = (int)(s_stani);System.out.println(Integer.toString(k_h));
 
-        int s = k_h + k_sh + k_s + s_h + s_sh + s_s;
+        if(i == 7 && j == 24){//一番最後にint型に変える
+            int k_h = (int)(k_htani);
+            int k_sh = (int)(k_shtani);
+            int k_s = (int)(k_stani);
+            int s_h = (int)(s_htani);
+            int s_sh = (int)(s_shtani);
+            int s_s = (int)(s_stani);
 
-        int leftk_h = k_hsum - k_h;
-        int leftk_sh = k_shsum - k_sh;
-        int leftk_s = k_ssum - k_s;
-        int lefts_h = s_hsum - s_h;
-        int lefts_sh = s_shsum - s_sh;
-        int lefts_s = s_ssum - s_s;
+            int s = k_h + k_sh + k_s + s_h + s_sh + s_s;
 
-        int lefts = sum - s;
+            int leftk_h = k_hsum - k_h;
+            int leftk_sh = k_shsum - k_sh;
+            int leftk_s = k_ssum - k_s;
+            int lefts_h = s_hsum - s_h;
+            int lefts_sh = s_shsum - s_sh;
+            int lefts_s = s_ssum - s_s;
 
-        
-        
-        now[0].setText(Integer.toString(k_h));
-        left[0].setText(Integer.toString(leftk_h));
-        //ksentakuhissyu2.setText(Integer.toString(k_sh));
-        //ksentakuhissyu3.setText(Integer.toString(leftk_sh));
-        now[2].setText(Integer.toString(k_s));
-        left[2].setText(Integer.toString(leftk_s));
-        now[3].setText(Integer.toString(s_h));
-        left[3].setText(Integer.toString(lefts_h));
-        now[4].setText(Integer.toString(s_sh));
-        left[4].setText(Integer.toString(lefts_sh));
-        now[5].setText(Integer.toString(s_s));
-        left[5].setText(Integer.toString(lefts_s));
-        now[6].setText(Integer.toString(s));
-        left[6].setText(Integer.toString(lefts));
+            int lefts = sum - s;
+
+            now[0].setText(Integer.toString(k_h));
+            left[0].setText(Integer.toString(leftk_h));
+            //ksentakuhissyu2.setText(Integer.toString(k_sh));
+            //ksentakuhissyu3.setText(Integer.toString(leftk_sh));
+            now[2].setText(Integer.toString(k_s));
+            left[2].setText(Integer.toString(leftk_s));
+            now[3].setText(Integer.toString(s_h));
+            left[3].setText(Integer.toString(lefts_h));
+            now[4].setText(Integer.toString(s_sh));
+            left[4].setText(Integer.toString(lefts_sh));
+            now[5].setText(Integer.toString(s_s));
+            left[5].setText(Integer.toString(lefts_s));
+            now[6].setText(Integer.toString(s));
+            left[6].setText(Integer.toString(lefts));
+        }   
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        now = new Label[]{khissyu2,ksentakuhissyu2,ksentaku2,shissyu2,ssentakuhissyu2,sksentaku2,sum1};
-        left = new Label[]{khissyu3,ksentakuhissyu3,ksentaku3,shissyu3,ssentakuhissyu3,ssentaku3,sum2};
-
-        System.out.println("TaniKesan Start");
-
-        
-    }
-
-    public static void initialize() {
-        Jikanwari.keisanStart();
-    }
 }

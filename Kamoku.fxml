@@ -60,6 +60,6 @@
       <Button layoutX="248.0" layoutY="427.0" mnemonicParsing="false" onAction="#deleteAction" text="削除" />
       <Button layoutX="1.0" layoutY="-1.0" minWidth="37.0" mnemonicParsing="false" onAction="#backAction" prefHeight="32.0" prefWidth="37.0" text="←" />
       <Button layoutX="194.0" layoutY="427.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" minWidth="37.0" mnemonicParsing="false" onAction="#saveAction" prefHeight="32.0" prefWidth="37.0" text="OK" />
-      <CheckBox fx:id="taniCheck" layoutX="212.0" layoutY="488.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#getTani" text="単位取得" />
+      <CheckBox fx:id="taniCheck" layoutX="212.0" layoutY="488.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="単位取得" />
    </children>
 </AnchorPane>
